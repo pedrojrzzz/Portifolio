@@ -19,6 +19,7 @@ export const ContainerNav = styled.nav`
       rgba(247, 246, 246, 0)
     )
     1;
+  transition: 0.2s;
 `;
 
 export const ContainerLogo = styled.div`
@@ -26,19 +27,36 @@ export const ContainerLogo = styled.div`
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  height: 100%;
-  width: 15%;
+  //height: 100%;
+  //width: 15%;
   white-space: nowrap; // Impede a quebra de linha
-
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: move-bg 3s ease infinite;
+  background-size: 400% 400%;
+  background-clip: text;
   p {
     margin-left: 25px;
-    color: ${(props) => props.colorConfig.textColor};
+    //color: ${(props) => props.colorConfig.textColor};
+    color: transparent;
   }
+
   & p {
     font-family: "Nunito Sans";
     font-weight: 800;
     letter-spacing: 0.5px;
     font-size: ${fontSizeConfig.logoFontSize};
+  }
+
+  @keyframes move-bg {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 `;
 

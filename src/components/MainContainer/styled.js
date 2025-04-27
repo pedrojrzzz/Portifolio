@@ -5,7 +5,7 @@ import { LiaLinkedin, LiaGithub, LiaEnvelope } from "react-icons/lia";
 export const DivContainer = styled.div`
   display: grid;
   grid-template-columns: 0.6fr 2.4fr;
-  grid-template-rows: 20% 80%;
+  grid-template-rows: 30% 80%;
   height: 80vh;
   width: 60vw;
   background-color: transparent;
@@ -117,16 +117,46 @@ export const DivContainer = styled.div`
   }
 
   .content-container {
-    margin-left: 40px;
-    border: 1px solid white;
-    .title-container {
-      width: 100%;
-      height: 50px;
-      border: 1px solid white;
+    margin-top: 80px;
+    height: fit-content;
+    margin-left: 23px;
+    position: relative;
+    overflow: hidden;
+    padding-left: 20px;
+    position: relative;
+    border-radius: 10px;
+    background-color: ${(props) => props.colorConfig.backgroundTextContent};
+    //background-color: rgb(9, 15, 9);
+    border: 0.1px solid ${(props) => props.colorConfig.borderColor};
 
-      h2 {
-        color: ${(props) => props.colorConfig.textColor};
+    // & ::before {
+    //content: "";
+    //height: 100%; //You can change this if you want smaller/bigger borders
+    //width: 1px;
+    //position: absolute;
+    //left: 0;
+    //top: 0; // If you want to set a smaller height and center it, change this value
+    //background-color: rgb(48, 51, 56); // The color of your border
+    //animation: border-increase 1s ease forwards;
+    // }
+
+    @keyframes border-increase {
+      from {
+        height: 0%;
       }
+
+      to {
+        height: 50%;
+      }
+    }
+  }
+
+  .title-container {
+    width: fit-content;
+    height: fit-content;
+
+    h2 {
+      color: ${(props) => props.colorConfig.textColor};
     }
   }
 `;

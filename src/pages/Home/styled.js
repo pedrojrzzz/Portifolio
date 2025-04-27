@@ -10,4 +10,5 @@ export const ContainerBody = styled.div`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: ${(props) => props.colorConfig.backgroundColor};
+  transition: 0.2s;
 `;
