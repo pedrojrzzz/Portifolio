@@ -91,11 +91,23 @@ export const DivContainer = styled.div`
   }
 
   .nav-container {
-    padding-top: 90px;
+    margin-top: 55px;
+
+    ul {
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      width: 150px;
+      height: fit-content;
+      padding: 0;
+    }
 
     ul li {
+      height: 25px;
+      width: 100px;
+      margin-top: 15px;
+      position: relative;
       list-style-type: none;
-      margin: 15px;
       font-family: "Nunito Sans";
       color: ${(props) => props.colorConfig.textColor};
       font-weight: 500;
@@ -110,16 +122,25 @@ export const DivContainer = styled.div`
       }
     }
 
-    .active {
+    .back {
+      position: absolute;
+      top: ${(props) => props.position};
+      z-index: -1;
+      height: 25px;
+      width: 100px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-radius: 5px;
       background-color: ${(props) => props.colorConfig.hoverIcon};
-      transition: 0.1s;
+      transition: 0.2s ease-in-out;
     }
   }
 
   .content-container {
     margin-top: 80px;
     height: fit-content;
-    margin-left: 23px;
     position: relative;
     overflow: hidden;
     padding-left: 20px;

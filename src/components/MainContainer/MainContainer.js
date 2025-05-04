@@ -10,16 +10,18 @@ const ProjectContentComponent = lazy(() => import("../../content/Project"));
 const CertificationContentComponent = lazy(() => import("../../content/Certification"));
 const SkillContentComponent = lazy(() => import("../../content/Skill"));
 
+let positionTab = "15px";
+
 export default function MainContainer() {
   const { currentColorConfig } = useSelector((state) => state.theme);
   const [currentTitleContent, setCurrentTitleContent] = useState("Sobre");
+  const [selected, setSelected] = useState("sobre");
   const contents = {
     Sobre: AboutContentComponent,
     Projetos: ProjectContentComponent,
     Certificações: CertificationContentComponent,
     Habilidades: SkillContentComponent,
   };
-  const titlesContent = Object.keys(contents);
 
   let CurrentComponent = contents[currentTitleContent];
   let previousTargetRef = useRef(null);
@@ -32,7 +34,7 @@ export default function MainContainer() {
     const clickedElement = event.target;
     previousTargetRef.current = clickedElement;
     clickedElement.classList.add("active");
-
+    positionTab = clickedElement.offsetTop + "px";
     handleContent(event);
   };
 
@@ -62,7 +64,7 @@ export default function MainContainer() {
   };
 
   return (
-    <DivContainer colorConfig={currentColorConfig}>
+    <DivContainer colorConfig={currentColorConfig} position={positionTab}>
       <div className="profile-image-container">
         <div className="profile-image"></div>
       </div>
@@ -106,28 +108,26 @@ export default function MainContainer() {
       </div>
 
       {/**        NAV       **/}
+
       <div className="nav-container">
         <ul>
-          <motion.div
-            initial={{ opacity: 1, transition: { duration: 1 } }}
-            animate={{ opacity: 1, transition: { duration: 1 } }}
-            key={titlesContent}
-          >
-            <motion.li onClick={handleClick} className="active" ref={previousTargetRef}>
+          <div>
+            <div className="back"></div>
+            <li onClick={handleClick} className="active" ref={previousTargetRef}>
               Sobre
-            </motion.li>
-            <motion.li onClick={handleClick}>Projetos</motion.li>
+            </li>
+            <li onClick={handleClick}>Projetos</li>
             <li onClick={handleClick}>Certificações</li>
             <li onClick={handleClick}>Habilidades</li>
-          </motion.div>
+          </div>
         </ul>
       </div>
+
+      {/**        CONTENT       **/}
       <div className="content-container">
         <div className="title-container">
           <h2>{currentTitleContent}</h2>
         </div>
-
-        {/**        CONTENT       **/}
 
         <AnimatePresence mode="wait">
           {CurrentComponent && (
