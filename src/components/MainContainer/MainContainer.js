@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { DivContainer, LinkedinIcon, GithubIcon, EmailIcon } from "./styled";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
+import { Linkedin, Mail } from "lucide-react";
+import IconSocialMedia from "../Icons/IconSocialMedia";
 
 // Meus componentes lazy
 const AboutContentComponent = lazy(() => import("../../content/About"));
@@ -80,10 +82,9 @@ export default function MainContainer() {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: 0.2 }}
-            className="github-container"
           >
-            <Link to="https://github.com/pedrojrzzz" target="_blank">
-              <GithubIcon colorConfig={currentColorConfig} href={"https://github.com/pedrojrzzz"} />
+            <Link to="https://github.com/pedrojrzzz" target="_blank" style={{ textDecoration: "none" }}>
+              <IconSocialMedia icon={"github"} />
             </Link>
           </motion.div>
 
@@ -91,18 +92,20 @@ export default function MainContainer() {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: 0.2 }}
-            className="linkedin-container"
           >
-            <LinkedinIcon />
+            <Link to="https://github.com/pedrojrzzz" target="_blank" style={{ textDecoration: "none" }}>
+              <IconSocialMedia icon={"linkedin"} />
+            </Link>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: 0.2 }}
-            className="email-container"
           >
-            <EmailIcon colorConfig={currentColorConfig} />
+            <Link to="https://github.com/pedrojrzzz" target="_blank" style={{ textDecoration: "none" }}>
+              <IconSocialMedia icon={"mail"} />
+            </Link>
           </motion.div>
         </div>
       </div>

@@ -5,6 +5,8 @@ export const colorDarkTheme = {
   textColor: "white",
   hoverIcon: "rgba(233, 233, 233, 0.16);",
   borderColor: "rgb(32, 33, 36)",
+  iconColor: "#5c73e6",
+  backgroundIconColor: "#212433",
 };
 
 export const colorLightTheme = {
@@ -14,4 +16,6 @@ export const colorLightTheme = {
   textColor: "rgb(0, 0, 0)",
   hoverIcon: "rgba(189, 185, 185, 0.26)",
   borderColor: "rgb(233, 230, 230)",
+  iconColor: "#5c73e6",
+  backgroundIconColor: "#FFFFF",
 };

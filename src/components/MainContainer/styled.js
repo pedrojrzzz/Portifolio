@@ -49,43 +49,85 @@ export const DivContainer = styled.div`
 
     .social-media {
       height: 55%;
-      width: 100%;
+      width: fit-content;
       display: flex;
       flex-direction: row;
-      justify-content: flex-start;
+      gap: 15px;
+      justify-content: space-between;
       align-items: flex-start;
       padding-left: 20px;
 
       .github-container {
-        padding: 2px;
-        cursor: pointer;
-
-        &:hover {
-          background-color: ${(props) => props.colorConfig.hoverIcon};
-          border-radius: 5px;
-        }
+        height: 40px;
+        width: 40px;
+        display: flex;
+        overflow: hidden;
+        transition: width 0.5s ease;
+        background-color: ${(props) => props.colorConfig.backgroundIconColor};
+        border-radius: 7px 7px 7px 7px;
+        gap: 5px;
       }
 
-      .linkedin-container {
-        padding: 2px;
-        cursor: pointer;
-        margin-left: 12px;
-
-        &:hover {
-          background-color: ${(props) => props.colorConfig.hoverIcon};
-          border-radius: 5px;
-        }
+      .github-container:hover {
+        width: 100px;
       }
 
-      .email-container {
-        padding: 2px;
-        cursor: pointer;
-        margin-left: 12px;
+      .github-icon-container {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-        &:hover {
-          background-color: ${(props) => props.colorConfig.hoverIcon};
-          border-radius: 5px;
-        }
+      .github-text-container {
+        height: 40px;
+        width: 80px;
+        display: none;
+      }
+
+      .github-container:hover > .github-text-container {
+        // display: inline;
+        //justify-content: center;
+        // align-items: center;
+      }
+    }
+
+    .linkedin-container {
+      height: 30px;
+      width: 100px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border-radius: 7px;
+      padding-top: 3.2px;
+      background-color: #1d2827;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #2f9c67;
+      }
+    }
+
+    .email-container {
+      padding: 2px;
+      cursor: pointer;
+      margin-left: 12px;
+
+      &:hover {
+        background-color: ${(props) => props.colorConfig.hoverIcon};
+        border-radius: 5px;
       }
     }
   }
@@ -170,14 +212,14 @@ export const DivContainer = styled.div`
         height: 50%;
       }
     }
-  }
 
-  .title-container {
-    width: fit-content;
-    height: fit-content;
+    .title-container {
+      width: fit-content;
+      height: fit-content;
 
-    h2 {
-      color: ${(props) => props.colorConfig.textColor};
+      h2 {
+        color: ${(props) => props.colorConfig.textColor};
+      }
     }
   }
 `;
