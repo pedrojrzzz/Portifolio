@@ -11,4 +11,11 @@ export const fontSizeConfig = {
   logoFontSize: "18pt",
   linksNavFontSize: "12pt",
   titleSectionFontSizwe: "18pt",
+  normalTextSize: "13pt",
+};
+
+export const fontFamily = {
+  title: "Playfair Display",
+  text: "Lato",
+  emphasis: "Roboto Mono",
 };

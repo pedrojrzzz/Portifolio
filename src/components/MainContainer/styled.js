@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontSizeConfig } from "../../config/fonts";
+import { fontSizeConfig, fontFamily } from "../../config/fonts";
 import { LiaLinkedin, LiaGithub, LiaEnvelope } from "react-icons/lia";
 
 export const DivContainer = styled.div`
@@ -56,79 +56,6 @@ export const DivContainer = styled.div`
       justify-content: space-between;
       align-items: flex-start;
       padding-left: 20px;
-
-      .github-container {
-        height: 40px;
-        width: 40px;
-        display: flex;
-        overflow: hidden;
-        transition: width 0.5s ease;
-        background-color: ${(props) => props.colorConfig.backgroundIconColor};
-        border-radius: 7px 7px 7px 7px;
-        gap: 5px;
-      }
-
-      .github-container:hover {
-        width: 100px;
-      }
-
-      .github-icon-container {
-        height: 40px;
-        width: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: red;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .github-text-container {
-        height: 40px;
-        width: 80px;
-        display: none;
-      }
-
-      .github-container:hover > .github-text-container {
-        // display: inline;
-        //justify-content: center;
-        // align-items: center;
-      }
-    }
-
-    .linkedin-container {
-      height: 30px;
-      width: 100px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      border-radius: 7px;
-      padding-top: 3.2px;
-      background-color: #1d2827;
-
-      a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        width: 100%;
-        height: 100%;
-        text-decoration: none;
-        color: #2f9c67;
-      }
-    }
-
-    .email-container {
-      padding: 2px;
-      cursor: pointer;
-      margin-left: 12px;
-
-      &:hover {
-        background-color: ${(props) => props.colorConfig.hoverIcon};
-        border-radius: 5px;
-      }
     }
   }
 
@@ -186,6 +113,7 @@ export const DivContainer = styled.div`
     position: relative;
     overflow: hidden;
     padding-left: 20px;
+    padding-right: 15px;
     position: relative;
     border-radius: 10px;
     background-color: ${(props) => props.colorConfig.backgroundTextContent};
@@ -219,6 +147,8 @@ export const DivContainer = styled.div`
 
       h2 {
         color: ${(props) => props.colorConfig.textColor};
+        font-family: ${fontFamily.title};
+        letter-spacing: 1px;
       }
     }
   }

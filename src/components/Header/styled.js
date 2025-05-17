@@ -12,13 +12,7 @@ export const ContainerNav = styled.nav`
   background: blur(10px);
   background-color: ${(props) => props.colorConfig.backgroundColor};
   border-bottom: 1px solid black;
-  border-image: linear-gradient(
-      to right,
-      rgba(66, 66, 66, 0),
-      rgb(211, 211, 211),
-      rgba(247, 246, 246, 0)
-    )
-    1;
+  border-image: linear-gradient(to right, rgba(66, 66, 66, 0), rgb(211, 211, 211), rgba(247, 246, 246, 0)) 1;
   transition: 0.2s;
 `;
 
@@ -41,9 +35,10 @@ export const ContainerLogo = styled.div`
   }
 
   & p {
-    font-family: "Nunito Sans";
-    font-weight: 800;
-    letter-spacing: 0.5px;
+    //font-family: "Nunito Sans";
+    font-family: "Playfair Display";
+    font-weight: 500;
+    letter-spacing: 1px;
     font-size: ${fontSizeConfig.logoFontSize};
   }
 

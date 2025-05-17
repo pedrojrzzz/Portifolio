@@ -1,9 +1,9 @@
 import React, { useState, useRef, lazy } from "react";
 import { useSelector } from "react-redux";
-import { DivContainer, LinkedinIcon, GithubIcon, EmailIcon } from "./styled";
+import { DivContainer } from "./styled";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
-import { Linkedin, Mail } from "lucide-react";
+
 import IconSocialMedia from "../Icons/IconSocialMedia";
 
 // Meus componentes lazy

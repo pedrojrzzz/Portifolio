@@ -13,9 +13,9 @@ export default function IconSocialMedia({ icon }) {
   };
 
   const iconsTextSizeContainer = {
-    github: "90px",
-    linkedin: "100px",
-    mail: "75px",
+    github: "100px",
+    linkedin: "120px",
+    mail: "80px",
   };
   const text = icon.replace(icon?.charAt(0), icon?.charAt(0).toUpperCase());
 

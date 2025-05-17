@@ -2,7 +2,7 @@ export const colorDarkTheme = {
   currentTheme: "dark",
   backgroundColor: "rgb(13, 17, 23)",
   backgroundTextContent: "rgb(22, 27, 34)",
-  textColor: "white",
+  textColor: "#CBD5E1",
   hoverIcon: "rgba(233, 233, 233, 0.16);",
   borderColor: "rgb(32, 33, 36)",
   iconColor: "#5c73e6",

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fontFamily } from "../../config/fonts";
 
 export const DivContainer = styled.div`
   height: 35px;
@@ -35,6 +36,7 @@ export const DivContainer = styled.div`
     white-space: nowrap;
     flex-shrink: 1;
     overflow: hidden;
+    font-family: ${fontFamily.emphasis};
 
     & p {
       text-decoration: none;
