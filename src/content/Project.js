@@ -6,40 +6,22 @@ const projects = [
   {
     title: "Exemplo 1",
     description: "Descrição qualquer",
+    thumbnail: "",
+    images: ["img1", "img2", "img3"],
   },
 
   {
     title: "Exemplo 2",
     description: "Descrição qualquer",
+    thumbnail: "",
+    images: ["img1", "img2", "img3"],
   },
 
   {
-    title: "Exemplo 3",
+    title: "Projeto Agenda",
     description: "Descrição qualquer",
-  },
-
-  {
-    title: "Exemplo 4",
-    description: "Descrição qualquer",
-  },
-  {
-    title: "Exemplo 1",
-    description: "Descrição qualquer",
-  },
-
-  {
-    title: "Exemplo 2",
-    description: "Descrição qualquer",
-  },
-
-  {
-    title: "Exemplo 3",
-    description: "Descrição qualquer",
-  },
-
-  {
-    title: "Exemplo 4",
-    description: "Descrição qualquer",
+    thumbnail: "",
+    images: ["img1", "img2", "img3"],
   },
 ];
 
@@ -49,6 +31,16 @@ export default function ProjectContentComponent() {
     <DivContainer colorConfig={currentColorConfig}>
       {projects.map((item, index) => (
         <div key={index} className={`div-project`}>
+          <div className="thumbnail"></div>
+
+          <div className="container-images">
+            {item.images.map((item, index) => (
+              <div className="images" key={index}>
+                {item}
+              </div>
+            ))}
+          </div>
+
           <h2>{item.title}</h2>
           <p>{item.description}</p>
         </div>

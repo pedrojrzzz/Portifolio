@@ -23,14 +23,36 @@ export const DivContainer = styled.div`
 
   .div-project {
     // Padrão pra todos projetos
-    height: 180px;
-    width: 180px;
+    height: 380px;
+    width: 370px;
     margin-bottom: 20px;
     border: 1px solid ${(props) => props.colorConfig.borderColor};
     border-radius: 10px;
 
     &:hover {
       display: absolute;
+    }
+
+    .thumbnail {
+      height: 180px;
+      width: 100%;
+      border-bottom: 1px solid white;
+    }
+    .container-images {
+      width: 100%;
+      min-width: 50%;
+      height: 45px;
+      display: flex;
+      column-gap: 25px;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid white;
+    }
+    .images {
+      height: 40px;
+      width: 65px;
+      border: 1px solid white;
+      border-radius: 5px;
       cursor: pointer;
     }
 
