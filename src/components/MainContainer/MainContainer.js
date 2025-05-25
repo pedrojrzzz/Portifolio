@@ -27,6 +27,7 @@ export default function MainContainer() {
 
   let CurrentComponent = contents[currentTitleContent];
   let previousTargetRef = useRef(null);
+  const contentElement = useRef(null);
 
   // Removing the hover effect in link nav, when clicked in other link nav
   const handleClick = (event) => {

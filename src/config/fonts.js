@@ -10,7 +10,7 @@ export default RobotoFont;
 export const fontSizeConfig = {
   logoFontSize: "18pt",
   linksNavFontSize: "12pt",
-  titleSectionFontSizwe: "18pt",
+  titleSectionFontSize: "18pt",
   normalTextSize: "13pt",
 };
 

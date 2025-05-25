@@ -108,12 +108,12 @@ export const DivContainer = styled.div`
   }
 
   .content-container {
-    margin-top: 80px;
+    margin-top: 60px;
     height: fit-content;
     position: relative;
     overflow: hidden;
     padding-left: 20px;
-    padding-right: 15px;
+    padding-right: 20px;
     position: relative;
     border-radius: 10px;
     background-color: ${(props) => props.colorConfig.backgroundTextContent};

@@ -14,6 +14,9 @@ export const Paragraph = styled.p`
 `;
 
 export const DivContainer = styled.div`
+  height: 40%;
+  width: 100%;
+  background-color: red;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -23,37 +26,55 @@ export const DivContainer = styled.div`
 
   .div-project {
     // Padrão pra todos projetos
-    height: 380px;
-    width: 370px;
+    height: 180px;
+    width: 100%;
     margin-bottom: 20px;
     border: 1px solid ${(props) => props.colorConfig.borderColor};
     border-radius: 10px;
+    background-color: #222831;
 
-    &:hover {
-      display: absolute;
-    }
-
-    .thumbnail {
+    /* .thumbnail {
       height: 180px;
       width: 100%;
-      border-bottom: 1px solid white;
+      position: relative;
+
+      img {
+        image-rendering: smooth;
+        background-repeat: no-repeat;
+        background-image: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+      }
     }
     .container-images {
       width: 100%;
       min-width: 50%;
-      height: 45px;
+      height: 50px;
       display: flex;
       column-gap: 25px;
       justify-content: center;
       align-items: center;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid ${(props) => props.colorConfig.borderColor};
     }
     .images {
       height: 40px;
       width: 65px;
-      border: 1px solid white;
       border-radius: 5px;
       cursor: pointer;
+
+      img {
+        image-rendering: smooth;
+        background-repeat: no-repeat;
+        background-image: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 7px;
+      }
+    }
+
+    .images.selected {
+      opacity: 0.8;
     }
 
     h2 {
@@ -62,6 +83,6 @@ export const DivContainer = styled.div`
 
     p {
       color: ${(props) => props.colorConfig.textColor};
-    }
+    } */
   }
 `;
