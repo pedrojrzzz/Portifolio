@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { fontSizeConfig } from "../../config/fonts";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 import { GoDot, GoDotFill } from "react-icons/go";
+import { HiMiniMagnifyingGlass } from "react-icons/hi2";
+import { FiCode } from "react-icons/fi";
+import { GrPersonalComputer } from "react-icons/gr";
 
 export const DivContainer = styled.div`
   display: flex;
@@ -10,21 +13,22 @@ export const DivContainer = styled.div`
 
   .div-project {
     // Padrão pra todos projetos
-    height: 25vh;
+    height: 40vh;
     width: 100%;
-    position: relative;
+    //position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: ${(props) => (props.isEven ? "row-reverse" : "row")};
     align-items: center;
     column-gap: 60px;
     margin-bottom: 30px;
-    //border: 1px solid ${(props) => props.colorConfig.borderColor};
     border-radius: 10px;
-    //background-color: ${(props) => props.colorConfig.backgroundCardColor};
+    border-bottom: 1px solid black;
+    border-image: linear-gradient(to right, rgba(66, 66, 66, 0), rgb(211, 211, 211), rgba(247, 246, 246, 0)) 1;
+    padding-bottom: 20px;
 
     .carousel-images {
-      height: 100%;
-      width: 47%;
+      height: 60%;
+      width: 50%;
       position: relative;
       margin-left: 30px;
       user-select: none;
@@ -47,7 +51,7 @@ export const DivContainer = styled.div`
     }
 
     .info-project {
-      height: 100%;
+      height: 70%;
       width: 50%;
 
       .container-title {
@@ -107,7 +111,7 @@ export const DivContainer = styled.div`
           }
         }
 
-        .status {
+        .details {
           width: 33.3%;
           display: flex;
           justify-content: center;
@@ -185,4 +189,16 @@ export const DotNotFill = styled(GoDot)`
 
 export const DotFill = styled(GoDotFill)`
   color: ${(props) => props.colorConfig.iconsCarouselColor};
+`;
+
+export const CodeIcon = styled(FiCode)`
+  color: #3b82f6;
+`;
+
+export const ComputerIcon = styled(GrPersonalComputer)`
+  color: #10b981;
+`;
+
+export const MagnifyingGlassIcon = styled(HiMiniMagnifyingGlass)`
+  color: #8b5cf6;
 `;

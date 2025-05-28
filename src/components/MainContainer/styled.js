@@ -112,8 +112,8 @@ export const DivContainer = styled.div`
     height: fit-content;
     position: relative;
     overflow: hidden;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
     position: relative;
     border-radius: 10px;
     background-color: ${(props) => props.colorConfig.backgroundTextContent};

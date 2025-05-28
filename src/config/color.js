@@ -9,6 +9,8 @@ export const colorDarkTheme = {
   backgroundIconColor: "#212433",
   backgroundCardColor: "#222831",
   iconsCarouselColor: "#CBD5E1",
+  backgroundModal: "#1E293B",
+  borderColorModal: "rgba(189, 185, 185, 0.26)",
 };
 
 export const colorLightTheme = {
@@ -22,4 +24,6 @@ export const colorLightTheme = {
   backgroundIconColor: "#FFFFF",
   backgroundCardColor: "#fffff",
   iconsCarouselColor: "#3B82F6",
+  backgroundModal: "#1E293B",
+  borderColorModal: "",
 };

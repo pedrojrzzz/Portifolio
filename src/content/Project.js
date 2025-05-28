@@ -1,5 +1,4 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import img from "../assets/images/bg-4.png";
 import img1 from "../assets/images/bg-2.png";
 import img2 from "../assets/images/bg-3.png";
@@ -8,6 +7,7 @@ import { Card } from "../components/Card/Card";
 
 const projects = [
   {
+    id: 1,
     title: "Projeto Agenda",
     description:
       "O EcoLuz é um projeto voltado à instalação de sistemas de iluminação pública sustentáveis em comunidades de baixa renda, utilizando energia solar. A iniciativa busca reduzir custos com eletricidade, aumentar a segurança noturna e promover o uso de fontes renováveis. O projeto envolve a capacitação de moradores locais para manutenção dos sistemas, incentivando o desenvolvimento comunitário e a geração de renda.",
@@ -18,8 +18,10 @@ const projects = [
   },
 
   {
-    title: "Exemplo 2",
-    description: "Descrição qualquer",
+    id: 2,
+    title: "Projeto Login",
+    description:
+      "O EcoLuz é um projeto voltado à instalação de sistemas de iluminação pública sustentáveis em comunidades de baixa renda, utilizando energia solar. A iniciativa busca reduzir custos com eletricidade, aumentar a segurança noturna e promover o uso de fontes renováveis. O projeto envolve a capacitação de moradores locais para manutenção dos sistemas, incentivando o desenvolvimento comunitário e a geração de renda.",
     thumbnail: img2,
     images: [img, img1, img2, img3],
     repository: "",
@@ -27,8 +29,10 @@ const projects = [
   },
 
   {
-    title: "Projeto Agenda",
-    description: "Descrição qualquer",
+    id: 3,
+    title: "Student Admin Project",
+    description:
+      "O EcoLuz é um projeto voltado à instalação de sistemas de iluminação pública sustentáveis em comunidades de baixa renda, utilizando energia solar. A iniciativa busca reduzir custos com eletricidade, aumentar a segurança noturna e promover o uso de fontes renováveis. O projeto envolve a capacitação de moradores locais para manutenção dos sistemas, incentivando o desenvolvimento comunitário e a geração de renda.",
     thumbnail: img3,
     images: [img, img1, img2, img3],
     repository: "",
@@ -41,30 +45,9 @@ export default function ProjectContentComponent() {
 
   return (
     <div>
-      {/* {projects.map((item) => (
-        <Card project={item} key={item} />
-      ))} */}
-      <Card project={projects[0]} />
+      {projects.map((project, index) => (
+        <Card key={project.id} project={project} index={index} />
+      ))}
     </div>
-    // <DivContainer colorConfig={currentColorConfig}>
-    //   {projects.map((item, index) => (
-    //     <div key={index} className={`div-project`}>
-    //       <div className="thumbnail">
-    //         <img src={img} alt={item.title} />
-    //       </div>
-
-    //       <div className="container-images">
-    //         {item.images.map((item, index) => (
-    //           <div className="images" key={index} onClick={() => changeThumbnail(item, index)}>
-    //             {<img src={item} alt={item.title} />}
-    //           </div>
-    //         ))}
-    //       </div>
-
-    //       <h2>{item.title}</h2>
-    //       <p>{item.description}</p>
-    //     </div>
-    //   ))}
-    // </DivContainer>
   );
 }

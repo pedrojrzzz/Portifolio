@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import PropTypes from "prop-types";
-import { DivContainer, ArrowLeft, ArrowRight, DotFill, DotNotFill } from "./styled";
-import { FiCode } from "react-icons/fi";
-import { GrPersonalComputer } from "react-icons/gr";
-import { VscFeedback } from "react-icons/vsc";
 import { Link } from "react-router-dom";
+import {
+  DivContainer,
+  ArrowLeft,
+  ArrowRight,
+  DotFill,
+  DotNotFill,
+  MagnifyingGlassIcon,
+  CodeIcon,
+  ComputerIcon,
+} from "./styled";
+import ModalDetails from "../Modal/ModalDetails";
 
 export function Card({ project }) {
   const { currentColorConfig } = useSelector((state) => state.theme);
@@ -14,6 +21,8 @@ export function Card({ project }) {
     thumbnail: project.thumbnail,
     currentIndex: project.images.indexOf(project.thumbnail),
   });
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const changeThumbnail = (indexImageSelected) => {
     let index = indexImageSelected;
@@ -27,8 +36,11 @@ export function Card({ project }) {
     });
   };
 
+  // Set which project will displayed with row-reverse
+  const isEven = project.id % 2 === 0 ? true : false;
+
   return (
-    <DivContainer colorConfig={currentColorConfig}>
+    <DivContainer colorConfig={currentColorConfig} isEven={isEven}>
       <div className="div-project">
         {/** Carousel  */}
         <div className="carousel-images">
@@ -63,22 +75,23 @@ export function Card({ project }) {
           <div className="container-buttons">
             <button className="repo-github">
               <Link to={project.repository} target="_blanket">
-                <FiCode size={30} color="#3B82F6" />
+                <CodeIcon size={30} color="#3B82F6" />
                 <span>Repositório</span>
               </Link>
             </button>
 
-            <button className="status">
-              <VscFeedback size={30} color="#8B5CF6" />
-              <span>Feedback</span>
+            <button className="details" onClick={() => setModalIsOpen(true)}>
+              <MagnifyingGlassIcon size={29} color="#8B5CF6" />
+              <span>Detalhes</span>
             </button>
 
             <button className="website">
               <Link to={project.websiteDemo} target="_blanket">
-                <GrPersonalComputer size={30} color="#10B981" />
+                <ComputerIcon size={30} color="#10B981" />
                 <span>Ver demo</span>
               </Link>
             </button>
+            {modalIsOpen && <ModalDetails isOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} project={project} />}
           </div>
         </div>
       </div>
