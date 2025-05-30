@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { IoMdClose } from "react-icons/io";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
+import { GoDot, GoDotFill } from "react-icons/go";
 
 export const Modal = styled.dialog`
   position: fixed;
   top: 30px;
-  height: 100%;
-  width: 40%;
+  height: fit-content;
+  width: 25%;
   min-width: 300px;
   z-index: 100;
   display: flex;
@@ -14,6 +15,7 @@ export const Modal = styled.dialog`
   align-items: center;
   background-color: ${(props) => props.colorConfig.backgroundModal};
   border: none;
+  overflow-y: hidden;
   scroll-behavior: auto;
 
   &::backdrop {
@@ -66,22 +68,38 @@ export const closeIcon = styled(IoMdClose)`
 
 export const CarouselContainer = styled.div`
   height: 30%;
-  min-height: 200px;
-  width: 90%;
+  min-height: 180px;
+  width: 70%;
+  min-width: 250px;
   position: relative;
   user-select: none;
-  border: 1px solid white;
+  //border: 1px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
-
-  margin-top: 10px;
+  margin-top: 25px;
 
   .carousel-images {
-    height: 90%;
+    height: 100%;
     width: 100%;
     border: 1px solid white;
+  }
+
+  img {
+    image-rendering: smooth;
+    background-repeat: no-repeat;
+    background-image: cover;
+    border-radius: 7px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .dots-images {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -108,5 +126,51 @@ export const ArrowRight = styled(MdArrowForwardIos)`
 
   &:hover {
     opacity: 0.7;
+  }
+`;
+
+export const DotNotFill = styled(GoDot)`
+  color: ${(props) => props.colorConfig.iconsCarouselColor};
+`;
+
+export const DotFill = styled(GoDotFill)`
+  color: ${(props) => props.colorConfig.iconsCarouselColor};
+`;
+
+export const DescriptionContainer = styled.div`
+  width: 90%;
+  height: fit-content;
+  //border: 1px solid white;
+  margin-top: 5px;
+
+  .title-description-container h3 {
+    color: ${(props) => props.colorConfig.textColor};
+    margin-bottom: 0;
+  }
+
+  .description-container p {
+    color: ${(props) => props.colorConfig.textColor};
+    margin: 0px 0px;
+  }
+`;
+
+export const TechnoContainer = styled.div`
+  width: 90%;
+  height: fit-content;
+  //border: 1px solid white;
+  margin-top: 15px;
+
+  .title-techno-container h3 {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: ${(props) => props.colorConfig.textColor};
+    margin-bottom: 5px;
+  }
+
+  .technologies-used {
+    display: flex;
+    column-gap: 15px;
+    //margin-left: 15px;
   }
 `;

@@ -14,6 +14,27 @@ export const fontSizeConfig = {
   normalTextSize: "13pt",
 };
 
+export const fontSizeConfig2 = {
+  sm: {
+    logoFontSize: "18pt",
+    linksNavFontSize: "12pt",
+    titleSectionFontSize: "18pt",
+    normalTextSize: "13pt",
+  },
+  md: {
+    logoFontSize: "18pt",
+    linksNavFontSize: "12pt",
+    titleSectionFontSize: "18pt",
+    normalTextSize: "13pt",
+  },
+  lg: {
+    logoFontSize: "18pt",
+    linksNavFontSize: "12pt",
+    titleSectionFontSize: "18pt",
+    normalTextSize: "13pt",
+  },
+};
+
 export const fontFamily = {
   title: "Playfair Display",
   text: "Lato",
