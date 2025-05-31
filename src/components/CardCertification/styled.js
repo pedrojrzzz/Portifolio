@@ -46,11 +46,19 @@ export const DivImage = styled.div`
   }
 `;
 
-export const Container2 = styled.div`
+export const ContainerInfo = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+
+  .span-certificate {
+    color: "rgb(85, 82, 82)";
+    text-indent: "25px";
+    font-size: "11pt";
+    margin-top: "0px";
+    font-weight: "700";
+  }
 `;
 
 export const DivTitle = styled.div`

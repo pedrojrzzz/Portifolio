@@ -20,18 +20,21 @@ export const fontSizeConfig2 = {
     linksNavFontSize: "12pt",
     titleSectionFontSize: "18pt",
     normalTextSize: "13pt",
+    smallTextSize: "",
   },
   md: {
     logoFontSize: "18pt",
     linksNavFontSize: "12pt",
     titleSectionFontSize: "18pt",
     normalTextSize: "13pt",
+    smallTextSize: "",
   },
   lg: {
     logoFontSize: "18pt",
     linksNavFontSize: "12pt",
     titleSectionFontSize: "18pt",
     normalTextSize: "13pt",
+    smallTextSize: "",
   },
 };
 

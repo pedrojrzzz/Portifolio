@@ -1,17 +1,37 @@
+// eslint.config.js
+import js from "@eslint/js";
 import reactPlugin from "eslint-plugin-react";
+import parser from "@babel/eslint-parser";
 
-/* eslint-disable import/no-anonymous-default-export */
 export default [
+  js.configs.recommended,
   {
-    files: ["src/**/*.js"],
+    files: ["src/**/*.js", "src/**/*.jsx"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
+      parser: parser,
+      parserOptions: {
+        requireConfigFile: false,
+        babelOptions: {
+          presets: ["@babel/preset-react"],
+        },
+      },
+    },
     plugins: {
       react: reactPlugin,
     },
     rules: {
-      // Regra do ESLint nativo
       semi: "error",
-
-      // Regras do eslint-plugin-react
+      "no-duplicate-imports": "error",
+      "no-unused-vars": "error",
+      "no-const-assign": "error",
+      "no-constant-binary-expression": "error",
+      "no-constant-condition": "error",
+      "no-dupe-args": "error",
+      "no-dupe-else-if": "error",
+      "array-callback-return": "error",
+      "no-await-in-loop": "error",
       "react/display-name": "error",
       "react/jsx-key": "error",
       "react/jsx-no-duplicate-props": "error",

@@ -1,36 +1,26 @@
-import react, { useRef } from "react";
+import React, { useRef } from "react";
 import { useSelector } from "react-redux";
-import { Container, DivImage, Container2, DivTitle, DivDate, DivButtons, ExpandIcon } from "./styled";
+import { Container, DivImage, ContainerInfo, DivTitle, DivDate, DivButtons, ExpandIcon } from "./styled";
 import certification from "../../assets/images/certificate-hardware-fundations.png";
 
 export default function CardCertification() {
   const { currentColorConfig } = useSelector((state) => state.theme);
   const expandContainerRef = useRef(null);
 
-  const handleHoverImage = () => {
+  const handleClickExpandImg = () => {
     expandContainerRef.current.classList.toggle("visble");
   };
 
   return (
     <Container colorConfig={currentColorConfig}>
-      <DivImage onMouseEnter={handleHoverImage} onMouseLeave={handleHoverImage}>
+      <DivImage onClick={handleClickExpandImg}>
         <div className="expand-container" ref={expandContainerRef}>
           <ExpandIcon colorConfig={currentColorConfig} color="black" size={50} />
         </div>
         <img src={certification} alt="" />
       </DivImage>
-      <Container2>
-        <span
-          style={{
-            color: "rgb(85, 82, 82)",
-            textIndent: "25px",
-            fontSize: "11pt",
-            marginTop: "0px",
-            fontWeight: "700",
-          }}
-        >
-          CERTIFICADO
-        </span>
+      <ContainerInfo>
+        <span className="span-certificate">CERTIFICADO</span>
         <DivTitle colorConfig={currentColorConfig}>
           <h3>Fundamentos do Hardaware do Computador</h3>
         </DivTitle>
@@ -44,7 +34,7 @@ export default function CardCertification() {
             <span>Expandir certificado</span>
           </button>
         </DivButtons>
-      </Container2>
+      </ContainerInfo>
     </Container>
   );
 }
