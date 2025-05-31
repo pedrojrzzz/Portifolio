@@ -61,6 +61,9 @@ export const DivContainer = styled.div`
 
   .nav-container {
     margin-top: 55px;
+    display: flex;
+
+    justify-content: center;
 
     ul {
       position: relative;
