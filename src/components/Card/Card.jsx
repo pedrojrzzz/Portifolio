@@ -101,6 +101,7 @@ export function Card({ project }) {
 
 Card.propTypes = {
   project: PropTypes.shape({
+    id: PropTypes.number,
     title: PropTypes.string,
     description: PropTypes.string,
     thumbnail: PropTypes.string,

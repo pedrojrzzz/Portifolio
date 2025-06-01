@@ -39,7 +39,6 @@ export default [
       "react/jsx-no-undef": "error",
       "react/jsx-uses-react": "error",
       "react/jsx-uses-vars": "error",
-      "react/no-children-prop": "error",
       "react/no-danger-with-children": "error",
       "react/no-deprecated": "error",
       "react/no-direct-mutation-state": "error",

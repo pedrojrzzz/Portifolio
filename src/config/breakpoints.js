@@ -5,3 +5,11 @@ export const breakpoint = {
   xl: "1280px",
   xxl: "1536px",
 };
+
+export const media = {
+  xxl: `@media (max-width: ${breakpoint.xxl})`,
+  xl: `@media (max-width: ${breakpoint.xl})`,
+  lg: `@media (max-width: ${breakpoint.lg})`,
+  md: `@media (max-width: ${breakpoint.md})`,
+  sm: `@media (max-width: ${breakpoint.sm})`,
+};

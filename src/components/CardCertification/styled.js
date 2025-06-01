@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { fontSizeConfig, fontFamily } from "../../config/fonts";
 import { IoExpand } from "react-icons/io5";
+import { IoMdClose } from "react-icons/io";
 
 export const Container = styled.div`
-  height: 120px;
+  height: 130px;
   width: 75%;
   display: flex;
   margin-bottom: 30px;
@@ -52,12 +53,14 @@ export const ContainerInfo = styled.div`
   display: flex;
   flex-direction: column;
 
-  .span-certificate {
-    color: "rgb(85, 82, 82)";
-    text-indent: "25px";
-    font-size: "11pt";
+  .paragraph-certificate {
+    font-size: "10pt";
     margin-top: "0px";
     font-weight: "700";
+    margin-left: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgb(80, 80, 80);
   }
 `;
 
@@ -83,7 +86,8 @@ export const DivDate = styled.div`
   height: 100%;
   width: 100%;
   margin-left: 25px;
-  //border: 1px solid white;
+  font-size: "12pt";
+  font-weight: "400";
 
   p {
     margin: 0;
@@ -125,4 +129,50 @@ export const DivButtons = styled.div`
 
 export const ExpandIcon = styled(IoExpand)`
   color: ${(props) => props.colorConfig.iconColor};
+`;
+
+export const ModalImage = styled.dialog`
+  height: clamp(300px, 60%, 70%);
+  width: clamp(350px, 45%, 70%);
+
+  background-color: ${(props) => props.colorConfig.backgroundModal};
+  border: none;
+  border-radius: 7px;
+  overflow: hidden;
+
+  &::backdrop {
+    backdrop-filter: blur(7px);
+  }
+
+  .header-modal {
+    height: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .container-image {
+    height: 95%;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px 0px 0px 5px;
+    height: 100%;
+    width: 100%;
+  }
+`;
+
+export const CloseIcon = styled(IoMdClose)`
+  color: ${(props) => props.colorConfig.iconColor};
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
 `;
