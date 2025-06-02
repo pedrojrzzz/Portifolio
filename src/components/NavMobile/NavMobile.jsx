@@ -15,7 +15,7 @@ export default function NavMobile({ handle }) {
     <Container colorConfig={currentColorConfig}>
       <ul>
         <div>
-          <div className="back"></div>
+          {/* <div className="back"></div> */}
           <li onClick={handleChangeTabBackground} className="active">
             Sobre
           </li>

@@ -25,7 +25,6 @@ let positionTab = "15px";
 export default function MainContainer() {
   const { currentColorConfig } = useSelector((state) => state.theme);
   const [currentTitleContent, setCurrentTitleContent] = useState("Sobre");
-  const [selected, setSelected] = useState("sobre");
   const contents = {
     Sobre: AboutContentComponent,
     Projetos: ProjectContentComponent,
@@ -35,7 +34,6 @@ export default function MainContainer() {
 
   let CurrentComponent = contents[currentTitleContent];
   let previousTargetRef = useRef(null);
-  const contentElement = useRef(null);
 
   // Removing the hover effect in link nav, when clicked in other link nav
   const handleClick = (event) => {
@@ -136,7 +134,7 @@ export default function MainContainer() {
           </ul>
         </NavContainer>
       ) : (
-        <NavMobile handle={handleClick} />
+        <NavMobile handle={handleContent} />
       )}
       {/* <NavContainer colorConfig={currentColorConfig} position={positionTab}>
         <ul>

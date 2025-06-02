@@ -51,7 +51,7 @@ export const Container = styled.div`
       padding-top: 5px;
       padding-bottom: 5px;
       border-radius: 5px;
-      background-color: ${(props) => props.colorConfig.hoverIcon};
+      //background-color: ${(props) => props.colorConfig.hoverIcon};
       transition: 0.2s ease-in-out;
     } */
   }
