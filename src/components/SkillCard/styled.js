@@ -9,9 +9,10 @@ export const Container = styled.div`
   //border: 1px solid white;
   border-radius: 7px;
   //background: #2a2a2a;
-  background-color: #0d1117;
+  background-color: ${(props) => props.colorConfig.backgroundSkillCard};
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  padding: 15px;
   margin-bottom: 20px;
   border: 0.1px solid ${(props) => props.colorConfig.borderColor};
 `;
@@ -19,7 +20,8 @@ export const Container = styled.div`
 export const SideColor = styled.div`
   height: 100%;
   width: 5px;
-  background: linear-gradient(to bottom, #7f5af0, #00c2ff);
+  //background: linear-gradient(to bottom, #7f5af0, #00c2ff);
+  background: ${(props) => props.color || "red"};
 `;
 
 export const CardStructure = styled.div`
@@ -52,17 +54,30 @@ export const Body = styled.div`
   height: 75%;
   width: 100%;
 
+  .container-title {
+    height: 10%;
+    //border: 1px solid white;
+    margin-bottom: 17px;
+  }
   h3 {
     color: ${(props) => props.colorConfig.textColor};
     margin-left: 30px;
     font-size: 13pt;
     font-weight: 500;
     font-family: ${fontFamily.emphasis};
+    margin-bottom: 0px;
+  }
+
+  .container-description {
+    height: 80%;
+    //border: 1px solid white;
   }
 
   p {
+    margin-top: 0px;
     margin-left: 30px;
     color: #adb5bd;
     font-family: ${fontFamily.text};
+    margin-right: 30px;
   }
 `;

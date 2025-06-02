@@ -7,16 +7,18 @@ export const Modal = styled.dialog`
   position: fixed;
   top: 30px;
   height: fit-content;
-  width: 25%;
+  width: 50%;
   min-width: 300px;
   z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: ${(props) => props.colorConfig.backgroundModal};
-  border: none;
-  overflow-y: hidden;
+  border: 0.1px solid rgba(68, 68, 68, 0.47);
+  overflow-x: hidden;
   scroll-behavior: auto;
+  border-radius: 7px;
+  padding-bottom: 50px;
 
   &::backdrop {
     backdrop-filter: blur(10px);
@@ -61,7 +63,7 @@ export const HeaderModal = styled.div`
   }
 `;
 
-export const closeIcon = styled(IoMdClose)`
+export const CloseIcon = styled(IoMdClose)`
   color: ${(props) => props.colorConfig.iconColor};
   flex-shrink: 0;
 `;
@@ -145,11 +147,13 @@ export const DescriptionContainer = styled.div`
 
   .title-description-container h3 {
     color: ${(props) => props.colorConfig.textColor};
+    font-weight: 600;
     margin-bottom: 0;
   }
 
   .description-container p {
-    color: ${(props) => props.colorConfig.textColor};
+    //color: ${(props) => props.colorConfig.textColor};
+    color: #adb5bd;
     margin: 0px 0px;
   }
 `;

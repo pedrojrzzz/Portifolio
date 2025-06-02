@@ -1,10 +1,18 @@
 import React, { useState, useRef, lazy } from "react";
 import { useSelector } from "react-redux";
-import { DivContainer } from "./styled";
+import {
+  DivContainer,
+  ProfileImageContainer,
+  PersonalInfo,
+  SocialMedia,
+  NavContainer,
+  ContentContainer,
+} from "./styled";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
-
 import IconSocialMedia from "../Icons/IconSocialMedia";
+import { useScreenWidth } from "../../hooks/windowSize";
+import NavMobile from "../NavMobile/NavMobile";
 
 // Meus componentes lazy
 const AboutContentComponent = lazy(() => import("../../content/About"));
@@ -66,54 +74,71 @@ export default function MainContainer() {
     }
   };
 
+  const screenWidth = useScreenWidth();
   return (
-    <DivContainer colorConfig={currentColorConfig} position={positionTab}>
-      <div className="profile-image-container">
+    <DivContainer colorConfig={currentColorConfig}>
+      {/**          PERSONAL - INFO            */}
+      <ProfileImageContainer colorConfig={currentColorConfig}>
         <div className="profile-image"></div>
-      </div>
+      </ProfileImageContainer>
 
-      <div className="personal-info">
+      <PersonalInfo colorConfig={currentColorConfig}>
         <div className="name">
           <p>Pedro Fortunato</p>
         </div>
 
-        {/**        SOCIAL-MEDIA       **/}
-        <div className="social-media">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
-          >
-            <Link to="https://github.com/pedrojrzzz" target="_blank" style={{ textDecoration: "none" }}>
-              <IconSocialMedia icon={"github"} />
-            </Link>
-          </motion.div>
+        <SocialMedia>
+          <div className="social-media">
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+            >
+              <Link to="https://github.com/pedrojrzzz" target="_blank" style={{ textDecoration: "none" }}>
+                <IconSocialMedia icon={"github"} />
+              </Link>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
-          >
-            <Link to="https://github.com/pedrojrzzz" target="_blank" style={{ textDecoration: "none" }}>
-              <IconSocialMedia icon={"linkedin"} />
-            </Link>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+            >
+              <Link to="https://github.com/pedrojrzzz" target="_blank" style={{ textDecoration: "none" }}>
+                <IconSocialMedia icon={"linkedin"} />
+              </Link>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
-          >
-            <Link to="https://github.com/pedrojrzzz" target="_blank" style={{ textDecoration: "none" }}>
-              <IconSocialMedia icon={"mail"} />
-            </Link>
-          </motion.div>
-        </div>
-      </div>
-
-      {/**        NAV       **/}
-
-      <div className="nav-container">
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+            >
+              <Link to="https://github.com/pedrojrzzz" target="_blank" style={{ textDecoration: "none" }}>
+                <IconSocialMedia icon={"mail"} />
+              </Link>
+            </motion.div>
+          </div>
+        </SocialMedia>
+      </PersonalInfo>
+      {screenWidth > 1024 ? (
+        <NavContainer colorConfig={currentColorConfig} position={positionTab}>
+          <ul>
+            <div>
+              <div className="back"></div>
+              <li onClick={handleClick} className="active" ref={previousTargetRef}>
+                Sobre
+              </li>
+              <li onClick={handleClick}>Projetos</li>
+              <li onClick={handleClick}>Certificações</li>
+              <li onClick={handleClick}>Habilidades</li>
+            </div>
+          </ul>
+        </NavContainer>
+      ) : (
+        <NavMobile handle={handleClick} />
+      )}
+      {/* <NavContainer colorConfig={currentColorConfig} position={positionTab}>
         <ul>
           <div>
             <div className="back"></div>
@@ -125,10 +150,10 @@ export default function MainContainer() {
             <li onClick={handleClick}>Habilidades</li>
           </div>
         </ul>
-      </div>
+      </NavContainer> */}
 
       {/**        CONTENT       **/}
-      <div className="content-container">
+      <ContentContainer colorConfig={currentColorConfig}>
         <div className="title-container">
           <h2>{currentTitleContent}</h2>
         </div>
@@ -146,7 +171,7 @@ export default function MainContainer() {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </ContentContainer>
     </DivContainer>
   );
 }

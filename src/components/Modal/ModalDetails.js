@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import {
   Modal,
   HeaderModal,
+  CloseIcon,
   CarouselContainer,
   DescriptionContainer,
   TechnoContainer,
@@ -12,7 +13,7 @@ import {
   DotNotFill,
 } from "./styled";
 import { createPortal } from "react-dom";
-import { IoMdClose } from "react-icons/io";
+
 import { FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiRedux } from "react-icons/si";
@@ -58,7 +59,7 @@ export default function ModalDetails({ isOpen, setModalIsOpen, project }) {
         </div>
 
         <div className="close-container" onClick={handleClick}>
-          <IoMdClose size={30} color="white" style={{ minHeight: "30px", minWidth: "30px" }} />
+          <CloseIcon size={30} colorConfig={currentColorConfig} style={{ minHeight: "30px", minWidth: "30px" }} />
         </div>
       </HeaderModal>
 
@@ -100,6 +101,7 @@ export default function ModalDetails({ isOpen, setModalIsOpen, project }) {
         </div>
       </TechnoContainer>
     </Modal>,
+    // eslint-disable-next-line no-undef
     document.body
   );
 }

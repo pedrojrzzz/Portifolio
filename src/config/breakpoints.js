@@ -7,9 +7,9 @@ export const breakpoint = {
 };
 
 export const media = {
-  xxl: `@media (max-width: ${breakpoint.xxl})`,
-  xl: `@media (max-width: ${breakpoint.xl})`,
-  lg: `@media (max-width: ${breakpoint.lg})`,
-  md: `@media (max-width: ${breakpoint.md})`,
-  sm: `@media (max-width: ${breakpoint.sm})`,
+  xxl: `@media (mix-width: ${breakpoint.xxl})`,
+  xl: `@media (mix-width: ${breakpoint.xl})`,
+  lg: `@media (mix-width: ${breakpoint.lg})`,
+  md: `@media (mix-width: ${breakpoint.md})`,
+  sm: `@media (mix-width: ${breakpoint.sm})`,
 };

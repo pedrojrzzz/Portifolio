@@ -3,23 +3,24 @@ import { Container, ContainerIcon, SideColor, CardStructure, Header, Body } from
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 
-export default function SkillCard({ children }) {
+export default function SkillCard({ technologies }) {
   const { currentColorConfig } = useSelector((state) => state.theme);
+
+  const { id, title, textDescription, children, sideColor } = technologies;
   return (
-    <Container colorConfig={currentColorConfig}>
-      <SideColor />
+    <Container colorConfig={currentColorConfig} key={id}>
+      <SideColor color={sideColor} />
       <CardStructure>
         <Header>
           <ContainerIcon>{children}</ContainerIcon>
         </Header>
         <Body colorConfig={currentColorConfig}>
-          <h3>JavaScript</h3>
-          <p>
-            Com JavaScript, desenvolvo interfaces interativas e dinâmicas para a web, utilizando recursos modernos da
-            linguagem como funções assíncronas, manipulação de eventos e estruturas modulares. Tenho experiência com
-            frameworks como React e bibliotecas como Redux e Zustand para construir aplicações escaláveis e de alta
-            performance.
-          </p>
+          <div className="container-title">
+            <h3>{title}</h3>
+          </div>
+          <div className="container-description">
+            <p>{textDescription}</p>
+          </div>
         </Body>
       </CardStructure>
     </Container>
@@ -27,5 +28,11 @@ export default function SkillCard({ children }) {
 }
 
 SkillCard.propTypes = {
-  children: PropTypes.element,
+  technologies: PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    textDescription: PropTypes.string,
+    children: PropTypes.element,
+    sideColor: PropTypes.string,
+  }),
 };

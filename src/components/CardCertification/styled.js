@@ -9,9 +9,9 @@ export const Container = styled.div`
   display: flex;
   margin-bottom: 30px;
   padding-bottom: 30px;
-  border-bottom: 0.5px solid rgb(241, 241, 241);
-  border-image: linear-gradient(to right, rgba(255, 255, 255, 0.77), rgba(255, 255, 255, 0.77), rgba(247, 246, 246, 0))
-    1;
+  //border-bottom: 0.5px solid rgb(241, 241, 241);
+  //border-image: linear-gradient(to right, rgba(255, 255, 255, 0.77), rgba(255, 255, 255, 0.77), rgba(247, 246, 246, 0))1;
+  border-bottom: 1px solid ${(props) => props.colorConfig.borderColor};
 `;
 
 export const DivImage = styled.div`

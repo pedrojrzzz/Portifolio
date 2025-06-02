@@ -14,146 +14,208 @@ export const DivContainer = styled.div`
   top: 45%;
   transform: translateY(-50%);
 
-  .profile-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .profile-image {
-      height: 195px;
-      width: 172px;
-      border-radius: 115%;
-      background-color: red;
-    }
+  @media (max-width: 1538px) {
+    margin: 0 auto;
+    width: 70vw;
   }
 
-  .personal-info {
+  @media (max-width: 1280px) {
+    width: 80vw;
+  }
+
+  @media (max-width: 1024px) {
+    /* grid-template-columns: 100%;
+    grid-template-rows: 30% 15% 15% 15% 60%;
+    justify-items: center; */
+
     display: flex;
     flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+`;
 
-    .name {
-      height: 45%;
-      width: 100%;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
+export const ProfileImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-      p {
-        margin-left: 20px;
-        font-family: "Nunito Sans";
-        font-size: ${fontSizeConfig.titleSectionFontSizwe};
-        font-weight: bolder;
-        color: ${(props) => props.colorConfig.textColor};
-      }
-    }
+  .profile-image {
+    height: 195px;
+    width: 172px;
+    border-radius: 115%;
+    background-color: red;
+  }
+`;
 
-    .social-media {
-      height: 55%;
-      width: fit-content;
-      display: flex;
-      flex-direction: row;
-      gap: 15px;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding-left: 20px;
+export const PersonalInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  .name {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    p {
+      margin-left: 20px;
+      margin-bottom: 0;
+      font-family: "Nunito Sans";
+      font-size: ${fontSizeConfig.logoFontSize};
+      font-weight: bolder;
+      color: ${(props) => props.colorConfig.textColor};
     }
   }
 
-  .nav-container {
-    margin-top: 55px;
+  /** Quebra do layout para tablets */
+  @media (max-width: 1024px) {
     display: flex;
-
+    align-items: center;
     justify-content: center;
 
-    ul {
-      position: relative;
-      display: flex;
-      justify-content: space-around;
-      width: 150px;
-      height: fit-content;
-      padding: 0;
-    }
+    .name {
+      height: 100%;
 
-    ul li {
-      height: 25px;
-      width: 100px;
-      margin-top: 15px;
-      position: relative;
-      list-style-type: none;
-      font-family: "Nunito Sans";
-      color: ${(props) => props.colorConfig.textColor};
-      font-weight: 500;
-      cursor: pointer;
-      padding: 5px;
-      padding-left: 10px;
-      padding-right: 10px;
-      border-radius: 5px;
-
-      &:hover {
-        background-color: ${(props) => props.colorConfig.hoverIcon};
+      p {
+        margin: 0;
       }
     }
+  }
+`;
 
-    .back {
-      position: absolute;
-      top: ${(props) => props.position};
-      z-index: -1;
-      height: 25px;
-      width: 100px;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      border-radius: 5px;
+export const SocialMedia = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  .social-media {
+    height: 50%;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  /** Quebra do layout para tablets */
+  @media (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    .social-media {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 15px;
+      padding: 0;
+    }
+  }
+`;
+
+export const NavContainer = styled.div`
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
+    height: fit-content;
+    padding: 0;
+  }
+
+  ul li {
+    height: 25px;
+    width: 100px;
+    margin-top: 15px;
+    position: relative;
+    list-style-type: none;
+    font-family: "Nunito Sans";
+    color: ${(props) => props.colorConfig.textColor};
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+
+    &:hover {
       background-color: ${(props) => props.colorConfig.hoverIcon};
-      transition: 0.2s ease-in-out;
     }
   }
 
-  .content-container {
-    margin-top: 60px;
+  .back {
+    position: absolute;
+    top: ${(props) => props.position};
+    z-index: -1;
+    height: 25px;
+    width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    background-color: ${(props) => props.colorConfig.hoverIcon};
+    transition: 0.2s ease-in-out;
+  }
+`;
+
+export const ContentContainer = styled.div`
+  margin-top: 60px;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+  padding-left: 30px;
+  padding-right: 40px;
+  position: relative;
+  border-radius: 10px;
+  background-color: ${(props) => props.colorConfig.backgroundTextContent};
+  //background-color: rgb(9, 15, 9);
+  border: 0.1px solid ${(props) => props.colorConfig.borderColor};
+
+  // & ::before {
+  //content: "";
+  //height: 100%; //You can change this if you want smaller/bigger borders
+  //width: 1px;
+  //position: absolute;
+  //left: 0;
+  //top: 0; // If you want to set a smaller height and center it, change this value
+  //background-color: rgb(48, 51, 56); // The color of your border
+  //animation: border-increase 1s ease forwards;
+  // }
+
+  @keyframes border-increase {
+    from {
+      height: 0%;
+    }
+
+    to {
+      height: 50%;
+    }
+  }
+
+  .title-container {
+    width: fit-content;
     height: fit-content;
-    position: relative;
-    overflow: hidden;
-    padding-left: 30px;
-    padding-right: 40px;
-    position: relative;
-    border-radius: 10px;
-    background-color: ${(props) => props.colorConfig.backgroundTextContent};
-    //background-color: rgb(9, 15, 9);
-    border: 0.1px solid ${(props) => props.colorConfig.borderColor};
 
-    // & ::before {
-    //content: "";
-    //height: 100%; //You can change this if you want smaller/bigger borders
-    //width: 1px;
-    //position: absolute;
-    //left: 0;
-    //top: 0; // If you want to set a smaller height and center it, change this value
-    //background-color: rgb(48, 51, 56); // The color of your border
-    //animation: border-increase 1s ease forwards;
-    // }
-
-    @keyframes border-increase {
-      from {
-        height: 0%;
-      }
-
-      to {
-        height: 50%;
-      }
+    h2 {
+      color: ${(props) => props.colorConfig.textColor};
+      font-family: ${fontFamily.title};
+      letter-spacing: 1px;
     }
+  }
 
-    .title-container {
-      width: fit-content;
-      height: fit-content;
-
-      h2 {
-        color: ${(props) => props.colorConfig.textColor};
-        font-family: ${fontFamily.title};
-        letter-spacing: 1px;
-      }
-    }
+  @media (max-width: 1024px) {
+    margin-top: 10px;
   }
 `;
 
