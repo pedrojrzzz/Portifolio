@@ -7,32 +7,35 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 5px;
   //border-bottom: 1px solid white;
 
   ul {
-    width: fit-content;
+    width: 100%;
     padding: 10px;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin: 0;
     list-style: none;
+    position: relative;
 
     li {
       display: inline;
       height: 100%;
-      width: 100%;
-      margin-top: 15px;
+      width: auto;
+      //margin-top: 15px;
       position: relative;
       list-style-type: none;
       font-family: "Nunito Sans";
       color: ${(props) => props.colorConfig.textColor};
       font-weight: 500;
       cursor: pointer;
-      padding: 5px;
       padding-left: 10px;
       padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
       border-radius: 5px;
 
       &:hover {

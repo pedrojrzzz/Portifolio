@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Container } from "./styled";
 import { useSelector } from "react-redux";
 import PropTypes from "prop-types";
 
 export default function NavMobile({ handle }) {
   const { currentColorConfig } = useSelector((state) => state.theme);
+  let currentTargetRef = useRef(null);
 
-  const handleChangeTabBackground = (event) => {
-    const rect = event.target.getBoundingClientRect();
-    console.log(rect);
+  const handleClickNav = (event) => {
+    currentTargetRef.current.classList.remove("active"); // Removing class of the previous element
+    currentTargetRef.current = event.target; // Reassing
+    currentTargetRef.current.classList.add("active"); // Adding class of the current element
     handle(event);
   };
   return (
@@ -16,12 +18,13 @@ export default function NavMobile({ handle }) {
       <ul>
         <div>
           {/* <div className="back"></div> */}
-          <li onClick={handleChangeTabBackground} className="active">
+          <li className="background-tab-selected"></li>
+          <li onClick={handleClickNav} ref={currentTargetRef} className="active">
             Sobre
           </li>
-          <li onClick={handle}>Projetos</li>
-          <li onClick={handle}>Certificações</li>
-          <li onClick={handle}>Habilidades</li>
+          <li onClick={handleClickNav}>Projetos</li>
+          <li onClick={handleClickNav}>Certificações</li>
+          <li onClick={handleClickNav}>Habilidades</li>
         </div>
       </ul>
     </Container>

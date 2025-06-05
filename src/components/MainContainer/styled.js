@@ -31,7 +31,7 @@ export const DivContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 10px;
+    row-gap: 5px;
   }
 `;
 
@@ -49,15 +49,19 @@ export const ProfileImageContainer = styled.div`
 `;
 
 export const PersonalInfo = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  //align-items: center;
+  row-gap: 13px;
 
   .name {
     height: 50%;
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    align-items: end;
 
     p {
       margin-left: 20px;
@@ -77,6 +81,9 @@ export const PersonalInfo = styled.div`
 
     .name {
       height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       p {
         margin: 0;
@@ -88,6 +95,8 @@ export const PersonalInfo = styled.div`
 export const SocialMedia = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 7px;
+  height: 100%;
 
   .social-media {
     height: 50%;
@@ -173,7 +182,7 @@ export const ContentContainer = styled.div`
   margin-top: 60px;
   height: fit-content;
   position: relative;
-  overflow: hidden;
+
   padding-left: 30px;
   padding-right: 40px;
   position: relative;
