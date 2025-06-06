@@ -12,9 +12,10 @@ import {
   ModalImage,
   CloseIcon,
 } from "./styled";
-import certification from "../../assets/images/certificate-hardware-fundations.png";
+//import certification from "../../assets/images/certificate-hardware-fundations.png";
+import PropTypes from "prop-types";
 
-export default function CardCertification() {
+export default function CardCertification({ certification }) {
   const { currentColorConfig } = useSelector((state) => state.theme);
   const modalRef = useRef(null);
 
@@ -29,19 +30,19 @@ export default function CardCertification() {
   return (
     <Container colorConfig={currentColorConfig}>
       <DivImage>
-        <img src={certification} alt="" />
+        <img src={certification.image} alt={`Certificado ${certification.title}`} />
       </DivImage>
 
       <ContainerInfo>
         <p className="paragraph-certificate">CERTIFICADO</p>
 
         <DivTitle colorConfig={currentColorConfig}>
-          <h3>Fundamentos do Hardaware do Computador</h3>
+          <h3>{certification.title}</h3>
         </DivTitle>
 
         <DivDate colorConfig={currentColorConfig}>
-          <p>Cisco Networking Academy</p>
-          <p>26 Fevereiro 2025</p>
+          <p>{certification.plataform}</p>
+          <p>{certification.date}</p>
         </DivDate>
 
         <DivButtons colorConfig={currentColorConfig}>
@@ -58,7 +59,7 @@ export default function CardCertification() {
                 <CloseIcon colorConfig={currentColorConfig} size={30} onClick={handleCloseModal} />
               </div>
               <div className="container-image">
-                <img src={certification} />
+                <img src={certification.image} />
               </div>
             </ModalImage>
           </div>,
@@ -69,3 +70,13 @@ export default function CardCertification() {
     </Container>
   );
 }
+
+CardCertification.propTypes = {
+  certification: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    plataform: PropTypes.string,
+    date: PropTypes.string,
+    image: PropTypes.string,
+  }),
+};

@@ -26,9 +26,7 @@ export default function Header() {
         <div className="circle" onClick={changeTheme}>
           <div
             onClick={toggleTheme}
-            className={
-              theme === "dark" ? "inside-circle-dark" : "inside-circle-light"
-            }
+            className={theme === "dark" ? "inside-circle-dark" : "inside-circle-light"}
             ref={insideCircle}
           ></div>
         </div>
