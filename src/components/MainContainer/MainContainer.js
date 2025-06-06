@@ -102,7 +102,11 @@ export default function MainContainer() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <Link to="https://github.com/pedrojrzzz" target="_blank" style={{ textDecoration: "none" }}>
+              <Link
+                to="https://linkedin.com/in/pedro-fortunato-3780371b5"
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
                 <IconSocialMedia icon={"linkedin"} />
               </Link>
             </motion.div>
@@ -112,8 +116,12 @@ export default function MainContainer() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <Link to="https://github.com/pedrojrzzz" target="_blank" style={{ textDecoration: "none" }}>
-                <IconSocialMedia icon={"mail"} />
+              <Link
+                to="mailto:pedro_alv12@hotmail.com?subject=Contato%20via%20portifólio"
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
+                <IconSocialMedia icon={"email"} />
               </Link>
             </motion.div>
           </div>

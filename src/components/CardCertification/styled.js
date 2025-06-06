@@ -19,14 +19,6 @@ export const DivImage = styled.div`
   width: 60%;
   position: relative;
 
-  .expand-container {
-    display: none;
-
-    &.visible {
-      display: block;
-    }
-  }
-
   .expand-container .visible {
     height: 100%;
     width: 100%;
@@ -41,7 +33,7 @@ export const DivImage = styled.div`
     transition: 0.5s;
   }
   img {
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 5px;
     height: 100%;
     width: 100%;
   }
@@ -162,7 +154,7 @@ export const ModalImage = styled.dialog`
   img {
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 5px;
     height: 100%;
     width: 100%;
   }

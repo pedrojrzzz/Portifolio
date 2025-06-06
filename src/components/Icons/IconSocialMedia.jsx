@@ -9,13 +9,13 @@ export default function IconSocialMedia({ icon }) {
   const icons = {
     github: <FiGithub color={currentColorConfig.iconColor} size={25} />,
     linkedin: <FiLinkedin color={currentColorConfig.iconColor} size={23} />,
-    mail: <FiMail color={currentColorConfig.iconColor} size={23} />,
+    email: <FiMail color={currentColorConfig.iconColor} size={23} />,
   };
 
   const iconsTextSizeContainer = {
     github: "100px",
     linkedin: "120px",
-    mail: "80px",
+    email: "90px",
   };
   const text = icon.replace(icon?.charAt(0), icon?.charAt(0).toUpperCase());
 
