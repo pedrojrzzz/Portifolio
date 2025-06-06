@@ -41,18 +41,6 @@ export const ContainerLogo = styled.div`
     letter-spacing: 1px;
     font-size: ${fontSizeConfig.logoFontSize};
   }
-
-  @keyframes move-bg {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 `;
 
 export const ContainerLinks = styled.div`
@@ -98,6 +86,10 @@ export const ContainerThemeToggle = styled.div`
     box-shadow: inset 0 0 0 3px black; /* Borda interna preta */
     transform: rotate(180deg);
     transition: 0.5s;
+  }
+
+  @media (max-width: 640px) {
+    margin-right: 10px;
   }
 `;
 
