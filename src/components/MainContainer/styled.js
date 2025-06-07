@@ -202,16 +202,6 @@ export const ContentContainer = styled.div`
   //animation: border-increase 1s ease forwards;
   // }
 
-  @keyframes border-increase {
-    from {
-      height: 0%;
-    }
-
-    to {
-      height: 50%;
-    }
-  }
-
   .title-container {
     width: fit-content;
     height: fit-content;
@@ -225,6 +215,7 @@ export const ContentContainer = styled.div`
 
   @media (max-width: 1024px) {
     margin-top: 10px;
+    width: 90%;
   }
 `;
 

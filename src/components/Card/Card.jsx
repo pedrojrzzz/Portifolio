@@ -4,6 +4,9 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import {
   DivContainer,
+  CarouselImages,
+  InfoProject,
+  ContainerButtons,
   ArrowLeft,
   ArrowRight,
   DotFill,
@@ -43,7 +46,7 @@ export function Card({ project }) {
     <DivContainer colorConfig={currentColorConfig} isEven={isEven}>
       <div className="div-project">
         {/** Carousel  */}
-        <div className="carousel-images">
+        <CarouselImages>
           <ArrowLeft
             colorConfig={currentColorConfig}
             size={25}
@@ -55,6 +58,7 @@ export function Card({ project }) {
             size={25}
             onClick={() => changeThumbnail(carouselData.currentIndex + 1)}
           />
+
           <div className="dots-images">
             {project.images.map((n, index) =>
               index === carouselData.currentIndex ? (
@@ -64,37 +68,38 @@ export function Card({ project }) {
               )
             )}
           </div>
-        </div>
+        </CarouselImages>
 
         {/** Info Project */}
-        <div className="info-project">
+        <InfoProject colorConfig={currentColorConfig}>
           <div className="container-title">{project.title}</div>
 
           <div className="container-description">{project.description}</div>
 
-          <div className="container-buttons">
+          <ContainerButtons colorConfig={currentColorConfig}>
             <button className="repo-github">
               <Link to={project.repository} target="_blanket">
-                <CodeIcon size={30} color="#3B82F6" />
+                <CodeIcon color="#3B82F6" />
                 <span>Repositório</span>
               </Link>
             </button>
 
             <button className="details" onClick={() => setModalIsOpen(true)}>
-              <MagnifyingGlassIcon size={29} color="#8B5CF6" />
+              <MagnifyingGlassIcon color="#8B5CF6" />
               <span>Detalhes</span>
             </button>
 
             <button className="website">
               <Link to={project.websiteDemo} target="_blanket">
-                <ComputerIcon size={30} color="#10B981" />
-                <span>Ver demo</span>
+                <ComputerIcon color="#10B981" />
+                <span>Demo</span>
               </Link>
             </button>
-            {modalIsOpen && <ModalDetails isOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} project={project} />}
-          </div>
-        </div>
+          </ContainerButtons>
+        </InfoProject>
       </div>
+
+      {modalIsOpen && <ModalDetails isOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} project={project} />}
     </DivContainer>
   );
 }
