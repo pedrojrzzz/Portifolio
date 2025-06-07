@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 10%;
+  //border: 1px solid white;
+  height: 100%;
   width: 100%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,36 +13,49 @@ export const Container = styled.div`
   //border-bottom: 1px solid white;
 
   ul {
+    height: 30px;
     width: 100%;
-    padding: 10px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    margin: 0;
-    list-style: none;
+    justify-content: center;
+    column-gap: 20px;
     position: relative;
+    padding: 0;
 
     li {
-      display: inline;
-      height: 100%;
-      width: auto;
-      //margin-top: 15px;
-      position: relative;
-      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      //border: 1px solid white;
+      height: 30px;
+      //width: clamp(90px 105px 150px);
+      //list-style-type: none;
+      width: 100px;
       font-family: "Nunito Sans";
       color: ${(props) => props.colorConfig.textColor};
       font-weight: 500;
       cursor: pointer;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 5px;
-      padding-bottom: 5px;
       border-radius: 5px;
 
       &:hover {
         background-color: ${(props) => props.colorConfig.hoverIcon};
+        transition: 0.5s;
       }
+
+      /* &.active {
+        background-color: ${(props) => props.colorConfig.hoverIcon};
+        transition: 0.5ss;
+      } */
+    }
+
+    .background-tab-selected {
+      position: absolute;
+      height: 30px;
+      width: ${(props) => props.largura};
+      left: ${(props) => props.positionTabSelected + "px"};
+      transition: 0.5s;
+      background-color: ${(props) => props.colorConfig.hoverIcon};
+      border-radius: 5px;
     }
 
     /* .back {
