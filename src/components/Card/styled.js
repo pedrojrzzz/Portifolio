@@ -25,13 +25,24 @@ export const DivContainer = styled.div`
     border-image: linear-gradient(to right, rgba(66, 66, 66, 0), rgb(211, 211, 211), rgba(247, 246, 246, 0)) 1;
     padding-bottom: 20px;
 
+    @media (max-width: 1536px) {
+      column-gap: 40px;
+    }
+
     // Change layout
     @media (max-width: 1280px) {
       display: flex;
       flex-direction: column;
-      height: auto;
+      height: fit-content;
       padding-top: 10px;
       padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      height: fit-content;
+      padding-top: 10px;
+      padding-bottom: 20px;
     }
   }
 `;
@@ -47,6 +58,7 @@ export const InfoProject = styled.div`
     justify-content: center;
     margin-top: 0px;
     font-size: ${fontSizeConfig.titleSectionFontSize};
+    font-weight: 700;
     color: ${(props) => props.colorConfig.textColor};
   }
 
@@ -60,92 +72,63 @@ export const InfoProject = styled.div`
     font-size: 11pt;
     color: ${(props) => props.colorConfig.textColor};
     text-indent: 20px;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: 1536px) {
+    width: 45%;
+  }
+
+  // Break layout
+  @media (max-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .container-title {
+      display: none;
+    }
+
+    .container-description {
+      height: auto;
+      max-height: fit-content;
+      width: 80%;
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container-description {
+      height: auto;
+      max-height: fit-content;
+      width: 100%;
+      margin-top: 35px;
+    }
   }
 `;
 
-export const ContainerButtons = styled.div`
-  height: 20%;
-  padding-top: 10px;
+export const ContainerTitleMobile = styled.div`
+  height: 15%;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  column-gap: 10px;
+  display: none;
 
-  a {
-    text-decoration: none;
+  @media (max-width: 1280px) {
     display: flex;
-    justify-content: center;
     align-items: center;
-  }
-
-  .repo-github {
-    width: 33.3%;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    cursor: pointer;
-    border: 0.5px solid #2a3038;
-    border-radius: 7px;
-    padding: 7px;
-
-    span {
-      padding-left: 5px;
-      color: ${(props) => props.colorConfig.textColor};
-    }
-
-    &:hover {
-      background-color: rgba(130, 133, 136, 0.11);
-    }
-  }
-
-  .details {
-    width: 33.3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    border: 0.5px solid #2a3038;
-    border-radius: 7px;
-    padding: 7px;
-    cursor: pointer;
-
-    span {
-      padding-left: 5px;
-      color: ${(props) => props.colorConfig.textColor};
-    }
-
-    &:hover {
-      background-color: rgba(130, 133, 136, 0.11);
-    }
-  }
-
-  .website {
-    width: 33.3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    cursor: pointer;
-    border: 0.5px solid #2a3038;
-    border-radius: 7px;
-    padding: 7px;
-
-    span {
-      padding-left: 5px;
-      color: ${(props) => props.colorConfig.textColor};
-    }
-
-    &:hover {
-      background-color: rgba(130, 133, 136, 0.11);
-    }
+    font-size: ${fontSizeConfig.titleSectionFontSize};
+    font-weight: 700;
+    color: ${(props) => props.colorConfig.textColor};
+    margin-bottom: 15px;
   }
 `;
 
 export const CarouselImages = styled.div`
   height: 60%;
   width: 50%;
+  min-width: 333px;
   position: relative;
   margin-left: 30px;
   user-select: none;
@@ -164,6 +147,22 @@ export const CarouselImages = styled.div`
     border-radius: 7px;
     height: 100%;
     width: 100%;
+  }
+
+  @media (max-width: 1536px) {
+    height: 55%;
+    width: 40%;
+    min-width: 310px;
+  }
+
+  // Break layout
+  @media (max-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-left: 10px;
   }
 `;
 
@@ -193,6 +192,90 @@ export const ArrowRight = styled(MdArrowForwardIos)`
   }
 `;
 
+export const ContainerButtons = styled.div`
+  height: 20%;
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+
+  @media (max-width: 1280px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+export const Button = styled.button`
+  width: 120px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0.5px solid #2a3038;
+  border-radius: 7px;
+
+  a {
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .div-icon {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  span {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //margin-left: 5px;
+    color: ${(props) => props.colorConfig.textColor};
+  }
+
+  &:hover {
+    background-color: rgba(130, 133, 136, 0.11);
+  }
+
+  @media (max-width: 1536px) {
+    .div-icon {
+      width: 25%;
+      justify-content: start;
+    }
+
+    span {
+      width: 75%;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .div-icon {
+      width: 35%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .span {
+      width: 65%;
+    }
+  }
+`;
+
 export const DotNotFill = styled(GoDot)`
   color: ${(props) => props.colorConfig.iconsCarouselColor};
 `;
@@ -206,7 +289,11 @@ export const CodeIcon = styled(FiCode)`
   font-size: 25px;
 
   @media (max-width: 1536px) {
-    font-size: 20px;
+    font-size: 22px;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 25px;
   }
 `;
 
@@ -215,7 +302,11 @@ export const ComputerIcon = styled(GrPersonalComputer)`
   font-size: 25px;
 
   @media (max-width: 1536px) {
-    font-size: 20px;
+    font-size: 22px;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 25px;
   }
 `;
 
@@ -225,5 +316,9 @@ export const MagnifyingGlassIcon = styled(HiMiniMagnifyingGlass)`
 
   @media (max-width: 1536px) {
     font-size: 20px;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 25px;
   }
 `;

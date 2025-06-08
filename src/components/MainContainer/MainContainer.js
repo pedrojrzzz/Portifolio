@@ -144,19 +144,6 @@ export default function MainContainer() {
       ) : (
         <NavMobile handle={handleContent} />
       )}
-      {/* <NavContainer colorConfig={currentColorConfig} position={positionTab}>
-        <ul>
-          <div>
-            <div className="back"></div>
-            <li onClick={handleClick} className="active" ref={previousTargetRef}>
-              Sobre
-            </li>
-            <li onClick={handleClick}>Projetos</li>
-            <li onClick={handleClick}>Certificações</li>
-            <li onClick={handleClick}>Habilidades</li>
-          </div>
-        </ul>
-      </NavContainer> */}
 
       {/**        CONTENT       **/}
       <ContentContainer colorConfig={currentColorConfig}>

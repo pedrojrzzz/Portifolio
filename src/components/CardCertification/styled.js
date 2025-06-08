@@ -5,37 +5,48 @@ import { IoMdClose } from "react-icons/io";
 
 export const Container = styled.div`
   height: 130px;
-  width: 75%;
+  width: 100%;
   display: flex;
   margin-bottom: 30px;
   padding-bottom: 30px;
   //border-bottom: 0.5px solid rgb(241, 241, 241);
   //border-image: linear-gradient(to right, rgba(255, 255, 255, 0.77), rgba(255, 255, 255, 0.77), rgba(247, 246, 246, 0))1;
   border-bottom: 1px solid ${(props) => props.colorConfig.borderColor};
+
+  /* @media (max-width: 1024px) {
+    flex-direction: column;
+    height: 50vh;
+    padding: 15px;
+  } */
+
+  @media (max-width: 768px) {
+    height: 145px;
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    height: fit-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 `;
 
 export const DivImage = styled.div`
   height: 100%;
-  width: 60%;
+  width: 40%;
+  min-width: 200px;
   position: relative;
 
-  .expand-container .visible {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    backdrop-filter: blur(2px);
-    border-radius: 7px;
-    cursor: pointer;
-    transition: 0.5s;
-  }
   img {
     border-radius: 5px;
     height: 100%;
     width: 100%;
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+    height: 50%;
+    min-height: 100px;
   }
 `;
 
@@ -53,6 +64,12 @@ export const ContainerInfo = styled.div`
     margin-top: 0;
     margin-bottom: 0;
     color: rgb(80, 80, 80);
+  }
+
+  @media (max-width: 640px) {
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
   }
 `;
 
@@ -72,6 +89,38 @@ export const DivTitle = styled.div`
     font-size: ${fontSizeConfig.normalTextSize};
     font-weight: bold;
   }
+
+  @media (max-width: 640px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+
+    h3 {
+      text-align: center;
+    }
+  }
+`;
+
+export const DivPlatform = styled.div`
+  height: 100%;
+  width: 100%;
+  margin-left: 25px;
+  font-size: "12pt";
+  font-weight: "400";
+
+  p {
+    margin: 0;
+    font-family: ${fontFamily.text};
+    color: ${(props) => props.colorConfig.textColor};
+    font-size: ${fontSizeConfig.normalTextSize};
+  }
+
+  @media (max-width: 640px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const DivDate = styled.div`
@@ -86,6 +135,12 @@ export const DivDate = styled.div`
     font-family: ${fontFamily.text};
     color: ${(props) => props.colorConfig.textColor};
     font-size: ${fontSizeConfig.normalTextSize};
+  }
+
+  @media (max-width: 640px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -116,6 +171,13 @@ export const DivButtons = styled.div`
     &:hover {
       background-color: rgba(130, 133, 136, 0.11);
     }
+  }
+
+  @media (max-width: 640px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
   }
 `;
 

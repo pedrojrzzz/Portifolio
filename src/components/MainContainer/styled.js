@@ -46,6 +46,15 @@ export const ProfileImageContainer = styled.div`
     border-radius: 115%;
     background-color: red;
   }
+
+  // Break layout
+  @media (max-width: 1024px) {
+    .profile-image {
+      height: 185px;
+      width: 156px;
+      margin-bottom: 5px;
+    }
+  }
 `;
 
 export const PersonalInfo = styled.div`
@@ -182,9 +191,8 @@ export const ContentContainer = styled.div`
   margin-top: 60px;
   height: fit-content;
   position: relative;
-
   padding-left: 30px;
-  padding-right: 40px;
+  padding-right: 30px;
   position: relative;
   border-radius: 10px;
   background-color: ${(props) => props.colorConfig.backgroundTextContent};
@@ -216,6 +224,12 @@ export const ContentContainer = styled.div`
   @media (max-width: 1024px) {
     margin-top: 10px;
     width: 90%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    //padding-left: 10px;
+    //padding-right: 10px;
   }
 `;
 

@@ -6,6 +6,7 @@ import {
   DivImage,
   ContainerInfo,
   DivTitle,
+  DivPlatform,
   DivDate,
   DivButtons,
   ExpandIcon,
@@ -40,8 +41,11 @@ export default function CardCertification({ certification }) {
           <h3>{certification.title}</h3>
         </DivTitle>
 
-        <DivDate colorConfig={currentColorConfig}>
+        <DivPlatform colorConfig={currentColorConfig}>
           <p>{certification.plataform}</p>
+        </DivPlatform>
+
+        <DivDate colorConfig={currentColorConfig}>
           <p>{certification.date}</p>
         </DivDate>
 

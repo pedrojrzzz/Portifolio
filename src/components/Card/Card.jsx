@@ -6,7 +6,9 @@ import {
   DivContainer,
   CarouselImages,
   InfoProject,
+  ContainerTitleMobile,
   ContainerButtons,
+  Button,
   ArrowLeft,
   ArrowRight,
   DotFill,
@@ -46,6 +48,7 @@ export function Card({ project }) {
     <DivContainer colorConfig={currentColorConfig} isEven={isEven}>
       <div className="div-project">
         {/** Carousel  */}
+        <ContainerTitleMobile colorConfig={currentColorConfig}>{project.title}</ContainerTitleMobile>
         <CarouselImages>
           <ArrowLeft
             colorConfig={currentColorConfig}
@@ -77,24 +80,32 @@ export function Card({ project }) {
           <div className="container-description">{project.description}</div>
 
           <ContainerButtons colorConfig={currentColorConfig}>
-            <button className="repo-github">
+            <Button className="repo-github" colorConfig={currentColorConfig}>
               <Link to={project.repository} target="_blanket">
-                <CodeIcon color="#3B82F6" />
+                <div className="div-icon">
+                  <CodeIcon color="#3B82F6" />
+                </div>
+
                 <span>Repositório</span>
               </Link>
-            </button>
+            </Button>
 
-            <button className="details" onClick={() => setModalIsOpen(true)}>
-              <MagnifyingGlassIcon color="#8B5CF6" />
+            <Button colorConfig={currentColorConfig} className="details" onClick={() => setModalIsOpen(true)}>
+              <div className="div-icon">
+                <MagnifyingGlassIcon color="#8B5CF6" />
+              </div>
+
               <span>Detalhes</span>
-            </button>
+            </Button>
 
-            <button className="website">
+            <Button colorConfig={currentColorConfig} className="website">
               <Link to={project.websiteDemo} target="_blanket">
-                <ComputerIcon color="#10B981" />
+                <div className="div-icon">
+                  <ComputerIcon color="#10B981" />
+                </div>
                 <span>Demo</span>
               </Link>
-            </button>
+            </Button>
           </ContainerButtons>
         </InfoProject>
       </div>
