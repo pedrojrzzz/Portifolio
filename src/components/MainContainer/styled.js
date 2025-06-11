@@ -33,6 +33,13 @@ export const DivContainer = styled.div`
     align-items: center;
     row-gap: 5px;
   }
+
+  @media (max-width: 768px) {
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 export const ProfileImageContainer = styled.div`

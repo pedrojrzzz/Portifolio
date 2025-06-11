@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { fontFamily } from "../../config/fonts";
 
 export const Container = styled.div`
-  height: 313px;
+  height: 323px;
   width: 360px;
   display: flex;
   flex-direction: row;
@@ -15,12 +15,22 @@ export const Container = styled.div`
   padding: 15px;
   margin-bottom: 20px;
   border: 0.1px solid ${(props) => props.colorConfig.borderColor};
+
+  @media (max-width: 1880px) {
+    width: 40%;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
 `;
 
 export const SideColor = styled.div`
   height: 100%;
   width: 5px;
-  //background: linear-gradient(to bottom, #7f5af0, #00c2ff);
   background: ${(props) => props.color || "red"};
 `;
 
@@ -45,7 +55,6 @@ export const ContainerIcon = styled.div`
   justify-content: center;
   margin-left: 30px;
   border-radius: 7px;
-  //background: linear-gradient(135deg, #1e1e1e, #3e3e3e);
   background: linear-gradient(135deg, #1e1e1e, rgb(46, 46, 46));
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 `;
@@ -56,7 +65,6 @@ export const Body = styled.div`
 
   .container-title {
     height: 10%;
-    //border: 1px solid white;
     margin-bottom: 17px;
   }
   h3 {
@@ -69,8 +77,12 @@ export const Body = styled.div`
   }
 
   .container-description {
-    height: 80%;
-    //border: 1px solid white;
+    display: -webkit-box;
+    width: 100%;
+    -webkit-line-clamp: 12; /* número de linhas antes do "..." */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: auto; /* pode ser ajustado se quiser limitar visualmente */
   }
 
   p {
@@ -79,5 +91,11 @@ export const Body = styled.div`
     color: #adb5bd;
     font-family: ${fontFamily.text};
     margin-right: 30px;
+  }
+
+  @media (max-width: 1850px) {
+    .container-description {
+      -webkit-line-clamp: 10; /* número de linhas antes do "..." */
+    }
   }
 `;

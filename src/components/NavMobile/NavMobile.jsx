@@ -25,7 +25,6 @@ export default function NavMobile({ handle }) {
     <Container colorConfig={currentColorConfig} positionTabSelected={positionTabSelected} largura={largura}>
       <ul>
         {/* <div className="back"></div> */}
-        <li className="background-tab-selected"></li>
         <li onClick={handleClickNav} ref={currentTargetRef} className="active">
           Sobre
         </li>

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  //border: 1px solid white;
   height: 100%;
   width: 100%;
   position: relative;
@@ -10,27 +9,25 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-top: 5px;
-  //border-bottom: 1px solid white;
 
   ul {
+    list-style: none;
+    padding-inline-start: 0;
     height: 30px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 20px;
-    position: relative;
-    padding: 0;
+    list-style: disc;
 
     li {
       display: flex;
       align-items: center;
       justify-content: space-around;
-      //border: 1px solid white;
       height: 30px;
-      //width: clamp(90px 105px 150px);
-      //list-style-type: none;
-      width: 100px;
+      width: auto;
+      padding: 5px;
       font-family: "Nunito Sans";
       color: ${(props) => props.colorConfig.textColor};
       font-weight: 500;
@@ -42,13 +39,13 @@ export const Container = styled.div`
         transition: 0.5s;
       }
 
-      /* &.active {
+      &.active {
         background-color: ${(props) => props.colorConfig.hoverIcon};
         transition: 0.5ss;
-      } */
+      }
     }
 
-    .background-tab-selected {
+    /* .background-tab-selected {
       position: absolute;
       height: 30px;
       width: ${(props) => props.largura};
@@ -56,7 +53,7 @@ export const Container = styled.div`
       transition: 0.5s;
       background-color: ${(props) => props.colorConfig.hoverIcon};
       border-radius: 5px;
-    }
+    } */
 
     /* .back {
       position: absolute;
@@ -72,5 +69,32 @@ export const Container = styled.div`
       //background-color: ${(props) => props.colorConfig.hoverIcon};
       transition: 0.2s ease-in-out;
     } */
+
+    @media (max-width: 640px) {
+      width: 330px;
+      align-items: start;
+      justify-content: start;
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        column-gap: 0px;
+      }
+
+      li {
+        justify-content: start;
+        font-size: 15px;
+        font-weight: 700;
+      }
+    }
+
+    @media (max-width: 400px) {
+      li {
+        justify-content: start;
+        font-size: 13px;
+        font-weight: 700;
+      }
+    }
   }
 `;

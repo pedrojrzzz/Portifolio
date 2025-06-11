@@ -186,8 +186,8 @@ export const ExpandIcon = styled(IoExpand)`
 `;
 
 export const ModalImage = styled.dialog`
-  height: clamp(300px, 60%, 70%);
-  width: clamp(350px, 45%, 70%);
+  height: 70%;
+  width: 60%;
 
   background-color: ${(props) => props.colorConfig.backgroundModal};
   border: none;
@@ -219,6 +219,46 @@ export const ModalImage = styled.dialog`
     border-radius: 5px;
     height: 100%;
     width: 100%;
+  }
+
+  @media (max-width: 1536px) {
+    height: 65%;
+    //width: 65%;
+    //min-width: 885px;
+  }
+
+  @media (max-width: 1280px) {
+    height: 60%;
+    width: 70%;
+    //min-width: 820px;
+  }
+
+  @media (max-width: 1024px) {
+    height: 35%;
+    width: 75%;
+    // min-width: 770px;
+  }
+
+  @media (max-width: 768px) {
+    height: 40%;
+    width: 80%;
+    //min-width: 635px;
+  }
+
+  @media (max-width: 640px) {
+    height: 35%;
+    width: 80%;
+    //min-width: 100px;
+  }
+
+  @media (max-width: 500px) {
+    height: 28%;
+    width: 85%;
+  }
+
+  @media (max-width: 400px) {
+    height: 25%;
+    width: 90%;
   }
 `;
 

@@ -19,8 +19,8 @@ export const fontSizeConfig2 = {
     logoFontSize: "18pt",
     linksNavFontSize: "12pt",
     titleSectionFontSize: "18pt",
-    normalTextSize: "13pt",
-    smallTextSize: "",
+    normalTextSize: "10pt",
+    smallTextSize: "9pt",
   },
   md: {
     logoFontSize: "18pt",

@@ -23,6 +23,14 @@ export const Modal = styled.dialog`
   &::backdrop {
     backdrop-filter: blur(10px);
   }
+
+  @media (max-width: 1024px) {
+    width: 70%;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const HeaderModal = styled.div`
@@ -70,7 +78,6 @@ export const CloseIcon = styled(IoMdClose)`
 
 export const CarouselContainer = styled.div`
   height: 30%;
-  min-height: 180px;
   width: 70%;
   min-width: 250px;
   position: relative;
@@ -102,6 +109,10 @@ export const CarouselContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  @media (max-width: 1536px) {
+    width: 90%;
   }
 `;
 
