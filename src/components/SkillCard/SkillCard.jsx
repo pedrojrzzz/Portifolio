@@ -1,8 +1,7 @@
 import React from "react";
-import { Container, ContainerIcon, SideColor, CardStructure, Header, Body } from "./styled";
+import { Container, ContainerIcon, SideColor, CardStructure, Header, Body, TooltipStyled } from "./styled";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
-import { Tooltip } from "react-tooltip";
 
 export default function SkillCard({ technologies }) {
   const { currentColorConfig } = useSelector((state) => state.theme);
@@ -22,20 +21,9 @@ export default function SkillCard({ technologies }) {
 
           <div id={"my-anchor-element-" + id} className="container-description">
             <p>{textDescription}</p>
-            <Tooltip
-              anchorSelect={"#my-anchor-element-" + id}
-              place="right"
-              style={{
-                height: "auto",
-                width: "300px",
-                whiteSpace: "wrap",
-                backgroundColor: "rgba(0, 0, 0, 0.9)",
-                opacity: 0,
-                color: "#fff",
-              }}
-            >
+            <TooltipStyled anchorSelect={"#my-anchor-element-" + id} place="right" style={{ width: "300px" }}>
               {textDescription}
-            </Tooltip>
+            </TooltipStyled>
           </div>
         </Body>
       </CardStructure>

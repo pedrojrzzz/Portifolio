@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { fontFamily } from "../../config/fonts";
+import { Tooltip } from "react-tooltip";
 
 export const Container = styled.div`
   height: 323px;
@@ -97,5 +98,18 @@ export const Body = styled.div`
     .container-description {
       -webkit-line-clamp: 10; /* número de linhas antes do "..." */
     }
+  }
+`;
+
+export const TooltipStyled = styled(Tooltip)`
+  height: "auto";
+  width: "300px";
+  white-space: "wrap";
+  background-color: "rgba(0, 0, 0, 0.9)";
+  opacity: 0;
+  color: "#fff";
+
+  #my-anchor-element-2 {
+    width: "300px";
   }
 `;
