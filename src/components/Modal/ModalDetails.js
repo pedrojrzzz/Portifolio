@@ -94,11 +94,7 @@ export default function ModalDetails({ isOpen, setModalIsOpen, project }) {
           <h3>Tecnologias Utilizadas</h3>
         </div>
 
-        <div className="technologies-used">
-          <FaReact size={30} color="#61DAFB" />
-          <IoLogoJavascript size={30} color="#F7DF1E" />
-          <SiRedux size={30} color="#764ABC" />
-        </div>
+        <div className="technologies-used">{project.technologiesUsed.map((item) => item)}</div>
       </TechnoContainer>
     </Modal>,
     // eslint-disable-next-line no-undef
