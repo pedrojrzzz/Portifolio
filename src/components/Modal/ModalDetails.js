@@ -14,10 +14,6 @@ import {
 } from "./styled";
 import { createPortal } from "react-dom";
 
-import { FaReact } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-import { SiRedux } from "react-icons/si";
-
 export default function ModalDetails({ isOpen, setModalIsOpen, project }) {
   const { currentColorConfig } = useSelector((state) => state.theme);
   const modalSelector = useRef(null);

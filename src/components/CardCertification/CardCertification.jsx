@@ -63,7 +63,7 @@ export default function CardCertification({ certification }) {
                 <CloseIcon colorConfig={currentColorConfig} size={30} onClick={handleCloseModal} />
               </div>
               <div className="container-image">
-                <img src={certification.image} />
+                <img src={certification.image} alt={`Certificado ${certification.title}`} />
               </div>
             </ModalImage>
           </div>,

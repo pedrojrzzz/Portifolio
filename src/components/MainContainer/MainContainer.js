@@ -69,6 +69,10 @@ export default function MainContainer() {
       case "Habilidades":
         setCurrentTitleContent("Habilidades");
         CurrentComponent = contents[currentTitleContent];
+        break;
+
+      default:
+        break;
     }
   };
 
