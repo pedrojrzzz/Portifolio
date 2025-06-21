@@ -81,7 +81,13 @@ export default function ModalDetails({ isOpen, setModalIsOpen, project }) {
         </div>
 
         <div className="description-container">
-          <p>{project.description}</p>
+          {project.description.map((paragraph, index) => (
+            <div key={index}>
+              <p key={`${paragraph}-${index}`}>{paragraph}</p>
+              <br />
+            </div>
+          ))}
+          {/* <p>{project.description}</p> */}
         </div>
       </DescriptionContainer>
 

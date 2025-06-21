@@ -48,6 +48,7 @@ export const DivContainer = styled.div`
 `;
 
 export const InfoProject = styled.div`
+  position: relative;
   height: 70%;
   width: 50%;
 
@@ -66,13 +67,20 @@ export const InfoProject = styled.div`
     height: 70%;
     max-height: 182px;
     width: 100%;
-    overflow-y: hidden;
     margin-top: 15px;
     text-align: center;
     font-size: 11pt;
     color: ${(props) => props.colorConfig.textColor};
     text-indent: 20px;
+    overflow: hidden;
     text-overflow: ellipsis;
+    p {
+      margin: 5px;
+      display: -webkit-box;
+      -webkit-line-clamp: 8; /* número de linhas antes do corte */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   }
 
   @media (max-width: 1536px) {
@@ -126,7 +134,7 @@ export const ContainerTitleMobile = styled.div`
 `;
 
 export const CarouselImages = styled.div`
-  height: 60%;
+  height: 55%;
   width: 50%;
   min-width: 333px;
   position: relative;

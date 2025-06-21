@@ -23,9 +23,10 @@ export default function AboutContentComponent() {
       </Paragraph>
 
       <Paragraph colorConfig={currentColorConfig}>
-        Hoje estou focado em desenvolvimento frontend, criando interfaces que sejam não só bonitas, mas também
-        funcionais e agradáveis de usar. Tenho alguns projetos no meu portfólio que mostram um pouco do meu estilo e da
-        minha evolução como desenvolvedor.{" "}
+        Atualmente, estou focado em desenvolvimento fullstack, criando aplicações completas, do front-end ao back-end,
+        que vão além de serem apenas funcionais — busco deixá-las agradáveis e de fácil usabilidade para o usuário.
+        Tenho alguns projetos no meu portfólio que mostram um pouco do meu estilo e da minha evolução como
+        desenvolvedor.{" "}
         <strong className="emphasis">
           Mas meu objetivo vai além: quero aprender outras linguagens e explorar mais áreas dentro da programação.
         </strong>

@@ -77,7 +77,9 @@ export function Card({ project }) {
         <InfoProject colorConfig={currentColorConfig}>
           <div className="container-title">{project.title}</div>
 
-          <div className="container-description">{project.description}</div>
+          <div className="container-description">
+            <p>{project.shortDescription}</p>
+          </div>
 
           <ContainerButtons colorConfig={currentColorConfig}>
             <Button className="repo-github" colorConfig={currentColorConfig}>
@@ -120,6 +122,7 @@ Card.propTypes = {
     id: PropTypes.number,
     title: PropTypes.string,
     description: PropTypes.string,
+    shortDescription: PropTypes.string,
     thumbnail: PropTypes.string,
     images: PropTypes.arrayOf(PropTypes.string),
     repository: PropTypes.string,

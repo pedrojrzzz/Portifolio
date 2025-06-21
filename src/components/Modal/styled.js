@@ -18,7 +18,7 @@ export const Modal = styled.dialog`
   overflow-x: hidden;
   scroll-behavior: auto;
   border-radius: 7px;
-  padding-bottom: 50px;
+  //padding-bottom: 50px;
 
   &::backdrop {
     backdrop-filter: blur(10px);
@@ -78,7 +78,7 @@ export const CloseIcon = styled(IoMdClose)`
 
 export const CarouselContainer = styled.div`
   height: 30%;
-  width: 70%;
+  width: 85%;
   min-width: 250px;
   position: relative;
   user-select: none;
@@ -173,7 +173,7 @@ export const TechnoContainer = styled.div`
   width: 90%;
   height: fit-content;
   //border: 1px solid white;
-  margin-top: 15px;
+  margin-top: 0px;
 
   .title-techno-container h3 {
     display: flex;
@@ -181,6 +181,7 @@ export const TechnoContainer = styled.div`
     justify-content: start;
     color: ${(props) => props.colorConfig.textColor};
     margin-bottom: 5px;
+    margin-top: 0px;
   }
 
   .technologies-used {
