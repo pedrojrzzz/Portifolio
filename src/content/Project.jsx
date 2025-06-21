@@ -43,7 +43,7 @@ const projects = [
     id: 2,
     title: "Projeto Login",
     description: [
-      "O EcoLuz é um projeto voltado à instalação de sistemas de iluminação pública sustentáveis em comunidades de baixa renda, utilizando energia solar. A iniciativa busca reduzir custos com eletricidade, aumentar a segurança noturna e promover o uso de fontes renováveis. O projeto envolve a capacitação de moradores locais para manutenção dos sistemas, incentivando o desenvolvimento comunitário e a geração de renda.",
+      "O projeto Login é um sistema de login completo, aonde o usuário fornece os dados para o registro e é enviado um e-mail com um código para ele confirmar, todo o modelo foi desenvolvido como API Rest arquitetura MVC",
     ],
     shortDescription:
       "O EcoLuz é um projeto voltado à instalação de sistemas de iluminação pública sustentáveis em comunidades de baixa renda, utilizando energia solar. A iniciativa busca reduzir custos com eletricidade, aumentar a segurança noturna e promover o uso de fontes renováveis. O projeto envolve a capacitação de moradores locais para manutenção dos sistemas, incentivando o desenvolvimento comunitário e a geração de renda.",
