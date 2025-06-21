@@ -3,7 +3,7 @@ import React from "react";
 import SkillCard from "../components/SkillCard/SkillCard";
 
 import { IoLogoJavascript } from "react-icons/io5";
-import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5 } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaDocker, FaGitAlt, FaGithub } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 
@@ -70,9 +70,35 @@ const technologies = [
     children: <RiTailwindCssFill size={27} color="#38bdf8" className="icon-icon" />,
     sideColor: "linear-gradient(to bottom, #38bdf8, #2d9fcf)",
   },
+
+  {
+    id: 8,
+    title: "Docker",
+    textDescription:
+      "Com Docker, consigo criar um ambiente de desenvolvimento que funciona igualzinho em qualquer lugar — sem aquelas dores de cabeça de 'na minha máquina funciona'. Ele me ajuda a organizar tudo o que a aplicação precisa em um contêiner só, facilitando o trabalho na hora de colocar no ar. Fica tudo mais prático e rápido.",
+    children: <FaDocker size={27} color="#119fed" />,
+    sideColor: "linear-gradient(to bottom, #119fed, #0f6594)",
+  },
+
+  {
+    id: 9,
+    title: "Git",
+    textDescription:
+      "Com Git, consigo otimizar o desenvolvimento dos meus softwares através do versionamento de código. Ele é especialmente útil quando quero testar novas ideias sem prejudicar o projeto original. Além disso, facilita muito o trabalho em equipe, mantendo todo o histórico de modificações bem organizado e documentado.",
+    children: <FaGitAlt size={27} color="#f1563a" />,
+    sideColor: "linear-gradient(to bottom, #f1563a, #a53d2b)",
+  },
+
+  {
+    id: 10,
+    title: "GitHub",
+    textDescription:
+      "Com o GitHub, consigo armazenar e organizar os códigos dos meus projetos usando o sistema de versionamento Git. A plataforma é muito útil tanto para contribuir com projetos open source quanto para divulgar meus próprios projetos pessoais de forma prática e profissional.",
+    children: <FaGithub size={27} color="#ffffff" />,
+    sideColor: "linear-gradient(to bottom, #ffffff, #ffffffda)",
+  },
 ];
 export default function SkillContentComponent() {
-  //const { currentColorConfig } = useSelector((state) => state.theme);
   return (
     <div style={{ display: "flex", flexDirection: "row", columnGap: "56px", rowGap: "30px", flexWrap: "wrap" }}>
       {technologies.map((item) => (

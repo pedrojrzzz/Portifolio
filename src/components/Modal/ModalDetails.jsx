@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import {
@@ -61,9 +62,17 @@ export default function ModalDetails({ isOpen, setModalIsOpen, project }) {
 
       <CarouselContainer>
         {/** Carousel  */}
-        <ArrowLeft colorConfig={currentColorConfig} onClick={() => changeThumbnail(carouselData.currentIndex - 1)} />
+        <ArrowLeft
+          size={25}
+          colorConfig={currentColorConfig}
+          onClick={() => changeThumbnail(carouselData.currentIndex - 1)}
+        />
         {<img src={carouselData.thumbnail} alt={project.title} />}
-        <ArrowRight colorConfig={currentColorConfig} onClick={() => changeThumbnail(carouselData.currentIndex + 1)} />
+        <ArrowRight
+          size={25}
+          colorConfig={currentColorConfig}
+          onClick={() => changeThumbnail(carouselData.currentIndex + 1)}
+        />
         <div className="dots-images">
           {project.images.map((n, index) =>
             index === carouselData.currentIndex ? (
@@ -99,7 +108,6 @@ export default function ModalDetails({ isOpen, setModalIsOpen, project }) {
         <div className="technologies-used">{project.technologiesUsed.map((item) => item)}</div>
       </TechnoContainer>
     </Modal>,
-    // eslint-disable-next-line no-undef
     document.body
   );
 }

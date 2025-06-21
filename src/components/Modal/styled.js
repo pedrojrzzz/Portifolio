@@ -18,7 +18,6 @@ export const Modal = styled.dialog`
   overflow-x: hidden;
   scroll-behavior: auto;
   border-radius: 7px;
-  //padding-bottom: 50px;
 
   &::backdrop {
     backdrop-filter: blur(10px);

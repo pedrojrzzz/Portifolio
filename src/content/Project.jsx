@@ -6,19 +6,19 @@ import { Card } from "../components/Card/Card";
 import { sapImages } from "../assets/images/sap-images/sap-images";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiRedux } from "react-icons/si";
+import { SiRedux, SiSequelize, SiMariadb } from "react-icons/si";
 
 const projects = [
   {
     id: 1,
     title: "Student Admin Portal",
     description: [
-      "O Student Admin Portal é um projeto desenvolvido com o objetivo de facilitar a administração e organização de alunos. Trata-se de um sistema com front-end responsivo e de fácil usabilidade, além de um back-end estruturado utilizando o modelo de arquitetura MVC, que foi o mais adequado para este projeto.",
+      "O Student Admin Portal é um sistema web completo para gerenciamento de alunos, com uma interface front-end responsiva e intuitiva, e um back-end robusto baseado em uma API REST, estruturada pela arquitetura MVC.",
       "O sistema conta com autenticação de usuários por meio de JWT (JSON Web Token), rotas protegidas e integração com um banco de dados SQL (MariaDB), utilizando o Sequelize como ORM para simplificar a comunicação com o banco de dados.",
       "Todo o front-end quanto o back-end foram desenvolvidos integralmente por mim, sem a utilização de templates prontos, qualquer código copiado de tutoriais, vídeos no YouTube ou cursos. Essa abordagem autonoma foi que me permitiu desenvolver uma base sólida técnica das tecnologias utilizadas, além de melhorar significativamente minhas habilidades em resolução de problemas, depuração de bugs e tomada de decisões de arquitetura de software.",
     ],
     shortDescription:
-      "O Student Admin Portal é um sistema web completo para gerenciamento de alunos, com interface front-end responsiva e intuitiva, e um back-end robusto baseado na arquitetura MVC. O projeto inclui autenticação segura com JWT, rotas protegidas e integração eficiente com banco de dados MariaDB utilizando Sequelize como ORM. Desenvolvido inteiramente do zero, sem uso de templates ou códigos prontos, o sistema reflete um alto nível de autonomia, domínio técnico e foco em boas práticas de desenvolvimento.",
+      "O Student Admin Portal é um sistema web completo para gerenciamento de alunos, com uma interface front-end responsiva e intuitiva, e um back-end robusto baseado em uma API REST, estruturada pela arquitetura MVC. O projeto inclui autenticação segura com JWT, rotas protegidas e integração eficiente com o banco de dados MariaDB. Desenvolvido inteiramente do zero, sem uso de templates ou códigos prontos.",
     thumbnail: sapImages.tableStudents,
     images: [
       sapImages.tableStudents,
@@ -30,10 +30,12 @@ const projects = [
     repository: "https://github.com/pedrojrzzz/Student-Admin-Portal-FrontEnd",
     websiteDemo: "https://pedrojrzzz.github.io/projeto-agenda/",
     technologiesUsed: [
-      <FaReact size={30} color="#61DAFB" key="react" />,
       <IoLogoJavascript size={30} color="#F7DF1E" key="javascript" />,
-      <SiRedux size={30} color="#764ABC" key="redux" />,
-      <FaNodeJs size={30} key="nodejs" color="#84BF08" />,
+      <FaReact size={30} color="#61DAFB" key="react" className="my-anchor-element" />,
+      <SiRedux size={30} color="#764ABC" key="redux" className="my-anchor-element" />,
+      <FaNodeJs size={30} color="#84BF08" key="nodejs" />,
+      <SiSequelize size={30} color="#08b3eb" key="sequelize" />,
+      <SiMariadb size={30} color="#c0765a" key="mariadb" />,
     ],
   },
 
