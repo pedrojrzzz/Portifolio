@@ -157,7 +157,7 @@ export const DivButtons = styled.div`
     align-items: center;
     background-color: transparent;
     cursor: pointer;
-    border: 0.5px solid #2a3038;
+    border: 0.5px solid ${(props) => props.colorConfig.borderColor};
     border-radius: 7px;
     padding: 7px;
     margin-left: 20px;

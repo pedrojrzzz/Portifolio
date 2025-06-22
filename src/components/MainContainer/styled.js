@@ -24,10 +24,6 @@ export const DivContainer = styled.div`
   }
 
   @media (max-width: 1024px) {
-    /* grid-template-columns: 100%;
-    grid-template-rows: 30% 15% 15% 15% 60%;
-    justify-items: center; */
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,7 +32,6 @@ export const DivContainer = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
-    //justify-content: center;
     align-items: center;
     flex-direction: column;
   }
@@ -211,19 +206,7 @@ export const ContentContainer = styled.div`
   position: relative;
   border-radius: 10px;
   background-color: ${(props) => props.colorConfig.backgroundTextContent};
-  //background-color: rgb(9, 15, 9);
   border: 0.1px solid ${(props) => props.colorConfig.borderColor};
-
-  // & ::before {
-  //content: "";
-  //height: 100%; //You can change this if you want smaller/bigger borders
-  //width: 1px;
-  //position: absolute;
-  //left: 0;
-  //top: 0; // If you want to set a smaller height and center it, change this value
-  //background-color: rgb(48, 51, 56); // The color of your border
-  //animation: border-increase 1s ease forwards;
-  // }
 
   .title-container {
     width: fit-content;

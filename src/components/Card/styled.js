@@ -225,7 +225,7 @@ export const Button = styled.button`
   align-items: center;
   background-color: transparent;
   cursor: pointer;
-  border: 0.5px solid #2a3038;
+  border: 0.5px solid ${(props) => props.colorConfig.borderColor};
   border-radius: 7px;
 
   a {
