@@ -48,17 +48,25 @@ export const ProfileImageContainer = styled.div`
   align-items: center;
 
   .profile-image {
-    height: 195px;
-    width: 172px;
+    height: 200px;
+    width: 200px;
     border-radius: 115%;
-    background-color: red;
+    position: relative;
+    box-shadow: 2px 1px 7px 0px black;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 115%;
+    background-size: contain;
   }
 
   // Break layout
   @media (max-width: 1024px) {
     .profile-image {
       height: 185px;
-      width: 156px;
+      width: 185px;
       margin-bottom: 5px;
     }
   }

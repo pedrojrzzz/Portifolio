@@ -4,6 +4,7 @@ import img1 from "../assets/images/bg-2.png";
 import img2 from "../assets/images/bg-3.png";
 import { Card } from "../components/Card/Card";
 import { sapImages } from "../assets/images/sap-images/sap-images";
+import { portifolioImages } from "../assets/images/portifolio-project/portifolio-images";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiRedux, SiSequelize, SiMariadb } from "react-icons/si";
@@ -28,7 +29,30 @@ const projects = [
       sapImages.sapImgLogin,
     ],
     repository: "https://github.com/pedrojrzzz/Student-Admin-Portal-FrontEnd",
-    websiteDemo: "https://pedrojrzzz.github.io/projeto-agenda/",
+    websiteDemo: null,
+    technologiesUsed: [
+      <IoLogoJavascript size={30} color="#F7DF1E" key="javascript" />,
+      <FaReact size={30} color="#61DAFB" key="react" className="my-anchor-element" />,
+      <SiRedux size={30} color="#764ABC" key="redux" className="my-anchor-element" />,
+      <FaNodeJs size={30} color="#84BF08" key="nodejs" />,
+      <SiSequelize size={30} color="#08b3eb" key="sequelize" />,
+      <SiMariadb size={30} color="#c0765a" key="mariadb" />,
+    ],
+  },
+  {
+    id: 2,
+    title: "Projeto Login",
+    description: [
+      "O projeto Login é um sistema de login completo, aonde o usuário fornece os dados para o registro e é enviado um e-mail com um código para ele confirmar, todo o modelo foi desenvolvido como API Rest arquitetura MVC",
+      "testes",
+      "teste",
+    ],
+    shortDescription:
+      "O EcoLuz é um projeto voltado à instalação de sistemas de iluminação pública sustentáveis em comunidades de baixa renda, utilizando energia solar. A iniciativa busca reduzir custos com eletricidade, aumentar a segurança noturna e promover o uso de fontes renováveis. O projeto envolve a capacitação de moradores locais para manutenção dos sistemas, incentivando o desenvolvimento comunitário e a geração de renda.",
+    thumbnail: img2,
+    images: [img, img1, img2, img],
+    repository: "",
+    websiteDemo: "aa",
     technologiesUsed: [
       <IoLogoJavascript size={30} color="#F7DF1E" key="javascript" />,
       <FaReact size={30} color="#61DAFB" key="react" className="my-anchor-element" />,
@@ -40,31 +64,30 @@ const projects = [
   },
 
   {
-    id: 2,
-    title: "Projeto Login",
-    description: [
-      "O projeto Login é um sistema de login completo, aonde o usuário fornece os dados para o registro e é enviado um e-mail com um código para ele confirmar, todo o modelo foi desenvolvido como API Rest arquitetura MVC",
-    ],
-    shortDescription:
-      "O EcoLuz é um projeto voltado à instalação de sistemas de iluminação pública sustentáveis em comunidades de baixa renda, utilizando energia solar. A iniciativa busca reduzir custos com eletricidade, aumentar a segurança noturna e promover o uso de fontes renováveis. O projeto envolve a capacitação de moradores locais para manutenção dos sistemas, incentivando o desenvolvimento comunitário e a geração de renda.",
-    thumbnail: img2,
-    images: [img, img1, img2, img],
-    repository: "",
-    websiteDemo: "",
-  },
-
-  {
     id: 3,
-    title: "Student Admin Project",
+    title: "Portifólio",
     description: [
-      "O EcoLuz é um projeto voltado à instalação de sistemas de iluminação pública sustentáveis em comunidades de baixa renda, utilizando energia solar. A iniciativa busca reduzir custos com eletricidade, aumentar a segurança noturna e promover o uso de fontes renováveis. O projeto envolve a capacitação de moradores locais para manutenção dos sistemas, incentivando o desenvolvimento comunitário e a geração de renda.",
+      "Sim, este portfólio também faz parte dos meus projetos. Trata-se de uma aplicação do tipo Single Page Application (SPA), com deploy realizado na plataforma Netlify.",
+      "O layout é totalmente responsivo, adaptando-se perfeitamente a qualquer tipo de dispositivo, seja desktop, tablet ou smartphone. Neste projeto, além de me apresentar profissionalmente, demonstro minhas habilidades técnicas, minhas principais stacks e projetos desenvolvidos, servindo como uma vitrine do meu trabalho e das tecnologias que domino.",
     ],
     shortDescription:
-      "O EcoLuz é um projeto voltado à instalação de sistemas de iluminação pública sustentáveis em comunidades de baixa renda, utilizando energia solar. A iniciativa busca reduzir custos com eletricidade, aumentar a segurança noturna e promover o uso de fontes renováveis. O projeto envolve a capacitação de moradores locais para manutenção dos sistemas, incentivando o desenvolvimento comunitário e a geração de renda.",
-    thumbnail: img,
-    images: [img, img1, img2, img],
-    repository: "",
+      "Sim, este portfólio também faz parte dos meus projetos, com deploy realizado na plataforma Netlify. O design é totalmente responsivo, garantindo uma experiência otimizada em qualquer dispositivo. Neste projeto, apresento meu perfil profissional, demonstro minhas habilidades técnicas, principais stacks e projetos desenvolvidos, funcionando como uma vitrine do meu trabalho e das tecnologias que domino.",
+    thumbnail: portifolioImages.thumbnail,
+    images: [
+      portifolioImages.about,
+      portifolioImages.certifications,
+      portifolioImages.projects,
+      portifolioImages.projects2,
+      portifolioImages.skills,
+      portifolioImages.skills2,
+    ],
+    repository: "https://github.com/pedrojrzzz/Portifolio",
     websiteDemo: "",
+    technologiesUsed: [
+      <IoLogoJavascript size={30} color="#F7DF1E" key="javascript" />,
+      <FaReact size={30} color="#61DAFB" key="react" className="my-anchor-element" />,
+      <SiRedux size={30} color="#764ABC" key="redux" className="my-anchor-element" />,
+    ],
   },
 ];
 

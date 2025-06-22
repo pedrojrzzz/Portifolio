@@ -48,6 +48,8 @@ export default function ModalDetails({ isOpen, setModalIsOpen, project }) {
     modalSelector.current.close();
   };
 
+  console.log(project.description.map((item) => item));
+
   return createPortal(
     <Modal ref={modalSelector} colorConfig={currentColorConfig}>
       <HeaderModal colorConfig={currentColorConfig}>
@@ -96,7 +98,6 @@ export default function ModalDetails({ isOpen, setModalIsOpen, project }) {
               <br />
             </div>
           ))}
-          {/* <p>{project.description}</p> */}
         </div>
       </DescriptionContainer>
 

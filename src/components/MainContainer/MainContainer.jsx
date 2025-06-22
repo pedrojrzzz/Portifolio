@@ -13,6 +13,7 @@ import { AnimatePresence, motion } from "motion/react";
 import IconSocialMedia from "../Icons/IconSocialMedia";
 import { useScreenWidth } from "../../hooks/windowSize";
 import NavMobile from "../NavMobile/NavMobile";
+import perfil from "../../assets/images/perfil.jpg";
 
 // Meus componentes lazy
 const AboutContentComponent = lazy(() => import("../../content/About"));
@@ -81,7 +82,9 @@ export default function MainContainer() {
     <DivContainer colorConfig={currentColorConfig}>
       {/**          PERSONAL - INFO            */}
       <ProfileImageContainer colorConfig={currentColorConfig}>
-        <div className="profile-image"></div>
+        <div className="profile-image">
+          <img src={perfil} />
+        </div>
       </ProfileImageContainer>
 
       <PersonalInfo colorConfig={currentColorConfig}>

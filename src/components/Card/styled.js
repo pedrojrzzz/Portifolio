@@ -259,6 +259,24 @@ export const Button = styled.button`
     background-color: rgba(130, 133, 136, 0.11);
   }
 
+  &:disabled {
+    cursor: default;
+    border: 1px solid grey;
+    background-color: rgb(88, 88, 88);
+
+    .div-icon {
+      cursor: default;
+    }
+
+    a {
+      cursor: default;
+    }
+
+    span {
+      color: rgb(158, 158, 158);
+    }
+  }
+
   @media (max-width: 1536px) {
     .div-icon {
       width: 25%;

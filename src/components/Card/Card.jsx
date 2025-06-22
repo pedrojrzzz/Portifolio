@@ -100,8 +100,8 @@ export function Card({ project }) {
               <span>Detalhes</span>
             </Button>
 
-            <Button colorConfig={currentColorConfig} className="website">
-              <Link to={project.websiteDemo} target="_blanket">
+            <Button colorConfig={currentColorConfig} className="website" disabled={!project.websiteDemo}>
+              <Link to={project.websiteDemo || null} target="_blanket">
                 <div className="div-icon">
                   <ComputerIcon color="#10B981" />
                 </div>
