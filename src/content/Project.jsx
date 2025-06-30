@@ -1,7 +1,4 @@
 import React from "react";
-import img from "../assets/images/bg-4.png";
-import img1 from "../assets/images/bg-2.png";
-import img2 from "../assets/images/bg-3.png";
 import { Card } from "../components/Card/Card";
 import { sapImages } from "../assets/images/sap-images/sap-images";
 import { portifolioImages } from "../assets/images/portifolio-project/portifolio-images";
@@ -29,7 +26,7 @@ const projects = [
       sapImages.sapImgLogin,
     ],
     repository: "https://github.com/pedrojrzzz/Student-Admin-Portal-FrontEnd",
-    websiteDemo: null,
+    websiteDemo: "https://student-admin-project.netlify.app/",
     technologiesUsed: [
       <IoLogoJavascript size={30} color="#F7DF1E" key="javascript" />,
       <FaReact size={30} color="#61DAFB" key="react" className="my-anchor-element" />,
@@ -39,29 +36,29 @@ const projects = [
       <SiMariadb size={30} color="#c0765a" key="mariadb" />,
     ],
   },
-  {
-    id: 2,
-    title: "Projeto Login",
-    description: [
-      "O projeto Login é um sistema de login completo, aonde o usuário fornece os dados para o registro e é enviado um e-mail com um código para ele confirmar, todo o modelo foi desenvolvido como API Rest arquitetura MVC",
-      "testes",
-      "teste",
-    ],
-    shortDescription:
-      "O EcoLuz é um projeto voltado à instalação de sistemas de iluminação pública sustentáveis em comunidades de baixa renda, utilizando energia solar. A iniciativa busca reduzir custos com eletricidade, aumentar a segurança noturna e promover o uso de fontes renováveis. O projeto envolve a capacitação de moradores locais para manutenção dos sistemas, incentivando o desenvolvimento comunitário e a geração de renda.",
-    thumbnail: img2,
-    images: [img, img1, img2, img],
-    repository: "",
-    websiteDemo: "aa",
-    technologiesUsed: [
-      <IoLogoJavascript size={30} color="#F7DF1E" key="javascript" />,
-      <FaReact size={30} color="#61DAFB" key="react" className="my-anchor-element" />,
-      <SiRedux size={30} color="#764ABC" key="redux" className="my-anchor-element" />,
-      <FaNodeJs size={30} color="#84BF08" key="nodejs" />,
-      <SiSequelize size={30} color="#08b3eb" key="sequelize" />,
-      <SiMariadb size={30} color="#c0765a" key="mariadb" />,
-    ],
-  },
+  // {
+  //   id: 2,
+  //   title: "Projeto Login",
+  //   description: [
+  //     "O projeto Login é um sistema de login completo, aonde o usuário fornece os dados para o registro e é enviado um e-mail com um código para ele confirmar, todo o modelo foi desenvolvido como API Rest arquitetura MVC",
+  //     "testes",
+  //     "teste",
+  //   ],
+  //   shortDescription:
+  //     "O EcoLuz é um projeto voltado à instalação de sistemas de iluminação pública sustentáveis em comunidades de baixa renda, utilizando energia solar. A iniciativa busca reduzir custos com eletricidade, aumentar a segurança noturna e promover o uso de fontes renováveis. O projeto envolve a capacitação de moradores locais para manutenção dos sistemas, incentivando o desenvolvimento comunitário e a geração de renda.",
+  //   thumbnail: img2,
+  //   images: [img, img1, img2, img],
+  //   repository: "",
+  //   websiteDemo: "aa",
+  //   technologiesUsed: [
+  //     <IoLogoJavascript size={30} color="#F7DF1E" key="javascript" />,
+  //     <FaReact size={30} color="#61DAFB" key="react" className="my-anchor-element" />,
+  //     <SiRedux size={30} color="#764ABC" key="redux" className="my-anchor-element" />,
+  //     <FaNodeJs size={30} color="#84BF08" key="nodejs" />,
+  //     <SiSequelize size={30} color="#08b3eb" key="sequelize" />,
+  //     <SiMariadb size={30} color="#c0765a" key="mariadb" />,
+  //   ],
+  // },
 
   {
     id: 3,
@@ -82,7 +79,7 @@ const projects = [
       portifolioImages.skills2,
     ],
     repository: "https://github.com/pedrojrzzz/Portifolio",
-    websiteDemo: "",
+    websiteDemo: "https://pedroportifol.netlify.app/",
     technologiesUsed: [
       <IoLogoJavascript size={30} color="#F7DF1E" key="javascript" />,
       <FaReact size={30} color="#61DAFB" key="react" className="my-anchor-element" />,
