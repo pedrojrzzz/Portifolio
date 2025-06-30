@@ -83,7 +83,7 @@ export default function MainContainer() {
       {/**          PERSONAL - INFO            */}
       <ProfileImageContainer colorConfig={currentColorConfig}>
         <div className="profile-image">
-          <img src={perfil} alt="image-perfil" />
+          <img src={perfil} alt="perfil" />
         </div>
       </ProfileImageContainer>
 
