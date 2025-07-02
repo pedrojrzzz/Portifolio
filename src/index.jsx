@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
@@ -15,7 +16,9 @@ root.render(
       <BrowserRouter>
         <App />
         <Router />
+        
         <InjectFonts />
+
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
