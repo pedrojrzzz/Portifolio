@@ -3,7 +3,7 @@ import React from "react";
 import SkillCard from "../components/SkillCard/SkillCard";
 
 import { IoLogoJavascript } from "react-icons/io5";
-import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaDocker, FaGitAlt, FaGithub } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaDocker, FaGitAlt, FaGithub, FaWindows } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 
@@ -97,6 +97,14 @@ const technologies = [
     children: <FaGithub size={27} color="#ffffff" />,
     sideColor: "linear-gradient(to bottom, #ffffff, #ffffffda)",
   },
+
+  {
+    id: 11,
+    title: "Windows",
+    textDescription: "Com o Windows, consigo instalar e utilizar diversos tipos de softwares para diferentes finalidades. Também sei utilizar as ferramentas nativas do sistema para monitorar o uso da CPU, GPU e rede. Mantenho o sistema sempre atualizado, configuro redes conforme necessário e utilizo os recursos de segurança oferecidos pelo próprio Windows",
+    children: <FaWindows size={27} color="#0078D4"/>,
+    sideColor: "linear-gradient(to bottom, #0078D4, #0163ad)",
+  }
 ];
 export default function SkillContentComponent() {
   return (
